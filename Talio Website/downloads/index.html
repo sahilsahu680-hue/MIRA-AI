@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Talio - HR that runs itself</title>
+    <meta name="description" content="Download Talio for macOS, Windows, and iOS. Get the native experience for attendance tracking, productivity monitoring, and seamless HR management.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="../logo.webp">
+    <link rel="apple-touch-icon" href="../logo.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Shared Dark Theme Styles -->
+    <link rel="stylesheet" href="../modern.css">
+    
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="download-hero">
+            <div class="container">
+                <span class="download-badge" id="platformBadge">
+                    <i class="fas fa-desktop"></i> DESKTOP APPLICATION
+                </span>
+                <h1>Download Talio</h1>
+                <p class="subtitle">
+                    Get the native experience for attendance tracking, productivity monitoring, and seamless HR management.
+                </p>
+                
+                <!-- Recommended Download -->
+                <div class="recommended-download" id="recommendedDownload">
+                    <div class="recommended-badge">
+                        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L14.2 8.4L21 9.2L16 14L17.5 21L12 17.5L6.5 21L8 14L3 9.2L9.8 8.4L12 2Z"/>
+                        </svg>
+                        Recommended for your device
+                    </div>
+                    <a href="https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio-3.2.0-arm64.dmg" class="download-btn-large" id="recommendedBtn" download="Talio-3.2.0-arm64.dmg">
+                        <div class="btn-content">
+                            <div class="btn-icon" id="recommendedIcon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                                </svg>
+                            </div>
+                            <div class="btn-text">
+                                <span class="btn-title" id="recommendedTitle">Download for macOS</span>
+                                <span class="btn-subtitle" id="recommendedSubtitle">Apple Silicon • v3.2.0 • ~83 MB</span>
+                            </div>
+                        </div>
+                        <svg class="download-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- All Platforms -->
+        <section class="all-platforms">
+            <h3 class="section-title">All Platforms</h3>
+            
+            <div class="platform-grid">
+                <!-- macOS Card -->
+                <div class="platform-card" id="macCard">
+                    <div class="platform-header">
+                        <div class="platform-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="platform-info">
+                            <span class="platform-name">macOS</span>
+                            <span class="platform-version">v3.2.0</span>
+                        </div>
+                    </div>
+                    <div class="platform-downloads">
+                        <a href="https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio-3.2.0-arm64.dmg" class="platform-link" download>
+                            <span>Apple Silicon (M-series)</span>
+                            <span class="size">arm64</span>
+                        </a>
+                        <a href="https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio-3.2.0.dmg" class="platform-link" download>
+                            <span>Intel (x64)</span>
+                            <span class="size">x64</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Windows Card -->
+                <div class="platform-card" id="windowsCard">
+                    <div class="platform-header">
+                        <div class="platform-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 12V6.75L9 5.43V11.91L3 12ZM20 3V11.75L10 11.9V5.21L20 3ZM3 13L9 13.09V19.9L3 18.75V13ZM10 13.25L20 13.5V22L10 20.09V13.25Z"/>
+                            </svg>
+                        </div>
+                        <div class="platform-info">
+                            <span class="platform-name">Windows</span>
+                            <span class="platform-version">v3.2.0</span>
+                        </div>
+                    </div>
+                    <div class="platform-downloads">
+                        <a href="https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio.Setup.3.2.0.exe" class="platform-link" download>
+                            <span>Windows 10/11 (64-bit)</span>
+                            <span class="size">x64</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- iOS Card (Coming Soon) -->
+                <div class="platform-card disabled" id="iosCard">
+                    <div class="platform-header">
+                        <div class="platform-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="platform-info">
+                            <span class="platform-name">iOS</span>
+                            <span class="platform-version">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-rocket"></i> Coming Soon
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- System Requirements -->
+        <section class="requirements">
+            <div class="requirements-box">
+                <h3>System Requirements</h3>
+                <div class="req-grid">
+                    <div class="req-item">
+                        <h4><i class="fab fa-apple" style="margin-right: 8px; color: #8b5cf6;"></i>macOS</h4>
+                        <ul>
+                            <li>macOS 10.15 (Catalina) or later</li>
+                            <li>Apple Silicon or Intel processor</li>
+                            <li>200 MB available disk space</li>
+                        </ul>
+                    </div>
+                    <div class="req-item">
+                        <h4><i class="fab fa-windows" style="margin-right: 8px; color: #3b82f6;"></i>Windows</h4>
+                        <ul>
+                            <li>Windows 10 or Windows 11</li>
+                            <li>64-bit processor</li>
+                            <li>200 MB available disk space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Particles JS -->
+    <script src="../components/particles.js"></script>
+    
+    <!-- Loader for Header/Footer -->
+    <script src="../components/loader.js"></script>
+    
+    <!-- Platform Detection Script -->
+    <script>
+        // Detect user's platform and update recommended download
+        function detectPlatform() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const platform = navigator.platform.toLowerCase();
+            
+            let os = 'unknown';
+            let arch = 'x64';
+            
+            // Detect OS
+            if (platform.includes('mac') || userAgent.includes('mac')) {
+                os = 'macos';
+                // Check for Apple Silicon
+                if (userAgent.includes('arm') || (window.navigator.userAgentData && window.navigator.userAgentData.platform === 'macOS')) {
+                    // Modern detection using navigator API
+                    arch = 'arm64';
+                }
+            } else if (platform.includes('win') || userAgent.includes('win')) {
+                os = 'windows';
+            } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+                os = 'ios';
+            }
+            
+            return { os, arch };
+        }
+        
+        function updateRecommendedDownload() {
+            const { os, arch } = detectPlatform();
+            const badge = document.getElementById('platformBadge');
+            const btn = document.getElementById('recommendedBtn');
+            const icon = document.getElementById('recommendedIcon');
+            const title = document.getElementById('recommendedTitle');
+            const subtitle = document.getElementById('recommendedSubtitle');
+            
+            const macCard = document.getElementById('macCard');
+            const windowsCard = document.getElementById('windowsCard');
+            
+            if (os === 'macos') {
+                badge.innerHTML = '<i class="fab fa-apple"></i> MACOS APPLICATION';
+                icon.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                </svg>`;
+                title.textContent = 'Download for macOS';
+                
+                if (arch === 'arm64') {
+                    btn.href = 'https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio-3.2.0-arm64.dmg';
+                    subtitle.textContent = 'Apple Silicon • v3.2.0 • ~83 MB';
+                } else {
+                    btn.href = 'https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio-3.2.0.dmg';
+                    subtitle.textContent = 'Intel (x64) • v3.2.0 • ~85 MB';
+                }
+                
+                macCard.classList.add('highlighted');
+            } else if (os === 'windows') {
+                badge.innerHTML = '<i class="fab fa-windows"></i> WINDOWS APPLICATION';
+                icon.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 12V6.75L9 5.43V11.91L3 12ZM20 3V11.75L10 11.9V5.21L20 3ZM3 13L9 13.09V19.9L3 18.75V13ZM10 13.25L20 13.5V22L10 20.09V13.25Z"/>
+                </svg>`;
+                title.textContent = 'Download for Windows';
+                subtitle.textContent = 'Windows 10/11 • v3.2.0 • ~90 MB';
+                btn.href = 'https://github.com/avirajsharma-ops/Talio/releases/download/v3.2.0/Talio.Setup.3.2.0.exe';
+                
+                windowsCard.classList.add('highlighted');
+            } else if (os === 'ios') {
+                badge.innerHTML = '<i class="fab fa-apple"></i> iOS APPLICATION';
+                icon.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                </svg>`;
+                title.textContent = 'Coming Soon';
+                subtitle.textContent = 'iOS app is in development';
+                btn.classList.add('disabled');
+                btn.removeAttribute('href');
+                btn.style.cursor = 'not-allowed';
+                btn.style.opacity = '0.6';
+            }
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', updateRecommendedDownload);
+    </script>
+</body>
+</html>

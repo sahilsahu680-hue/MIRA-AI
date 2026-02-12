@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Talio | Support & FAQs</title>
+    <meta name="description" content="Get help with Talio. Browse FAQs, tutorials, and contact our support team for assistance.">
+    
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="../logo.webp">
+    <link rel="apple-touch-icon" href="../logo.webp">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../modern.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- MIRA Particle Background -->
+    <canvas id="mira-canvas"></canvas>
+    
+    <!-- Dynamic Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-badge"><i class="fas fa-life-ring"></i> Help Center</span>
+                <h1>How Can We <span class="gradient-text">Help You?</span></h1>
+                <p>Find answers, browse tutorials, and get the support you need to make the most of Talio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Categories -->
+    <section class="page-section">
+        <div class="container">
+            <div class="feature-grid feature-grid-3" data-aos="fade-up">
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <p>Quick start guides and setup tutorials</p>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Attendance</h3>
+                    <p>Check-in, check-out, and time tracking</p>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Leave Management</h3>
+                    <p>Requesting and approving leaves</p>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Payroll</h3>
+                    <p>Salary, deductions, and payslips</p>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>MIRA AI</h3>
+                    <p>Using the AI assistant effectively</p>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Settings</h3>
+                    <p>Account and system configuration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-question-circle"></i> FAQs</span>
+                <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I reset my password?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To reset your password, go to the login page and click "Forgot Password". Enter your registered email address and you'll receive a password reset link. Follow the instructions in the email to create a new password. If you don't receive the email within a few minutes, check your spam folder.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does GPS-based attendance work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Talio uses geofencing technology to verify employee location during check-in/check-out. Administrators can set up office locations with a specific radius. When employees attempt to check in, the app verifies their GPS coordinates are within the defined boundary. This ensures accurate attendance tracking without manual verification.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I access Talio on multiple devices?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Talio is available on web browsers, Android devices, and as a desktop application. Your account syncs across all devices in real-time. However, for security purposes, attendance check-ins are typically restricted to your primary mobile device as configured by your administrator.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I apply for leave?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To apply for leave: 1) Navigate to the Leave section from the dashboard or sidebar. 2) Click "Apply Leave" button. 3) Select the leave type, start date, and end date. 4) Add a reason for your leave (optional but recommended). 5) Submit your request. Your manager will be notified and can approve or reject the request.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is MIRA and how can it help me?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MIRA is Talio's AI-powered assistant that can help you with various tasks through natural language. You can ask MIRA to check your leave balance, submit attendance corrections, find company policies, get payroll information, and much more. Simply type or speak your question, and MIRA will provide instant answers or perform actions on your behalf.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is overtime calculated?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Overtime is automatically calculated based on your organization's policies set by the administrator. Typically, hours worked beyond your standard shift duration (e.g., 8 hours) are tracked as overtime. The overtime rate (1.5x, 2x, etc.) and eligibility rules are configured in the system settings. You can view your overtime hours in the attendance reports section.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I download my payslip?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To download your payslip: 1) Go to the Payroll section from your dashboard. 2) Select the month and year for which you need the payslip. 3) Click the "Download" or "Print" icon next to the relevant payslip. 4) The payslip will be downloaded as a PDF file that you can save or print.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my data secure with Talio?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Talio employs enterprise-grade security measures including: 256-bit SSL encryption for all data transmission, encrypted data storage, regular security audits, GDPR compliance, role-based access controls, and secure authentication with optional 2FA. Your data is hosted on secure cloud infrastructure with automatic backups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-book"></i> Resources</span>
+                <h2>Additional <span class="gradient-text">Resources</span></h2>
+                <p>Explore our documentation and guides to become a Talio expert.</p>
+            </div>
+            <div class="feature-grid feature-grid-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive guides covering every feature and integration in Talio.</p>
+                    <a href="../docs/index.html" class="feature-link">Browse Docs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Reference</h3>
+                    <p>Developer documentation for integrating Talio with your existing systems.</p>
+                    <a href="../docs/index.html#api" class="feature-link">View API Docs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card liquid-glass">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Can't find what you're looking for? Our support team is here to help.</p>
+                    <a href="../contact/index.html" class="feature-link">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Still Need Help?</h2>
+                <p>Our support team is available to assist you with any questions.</p>
+                <div class="cta-buttons">
+                    <a href="../contact/index.html" class="btn btn-white">Contact Support <i class="fas fa-headset"></i></a>
+                    <a href="../docs/index.html" class="btn btn-outline">Read Documentation <i class="fas fa-book"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../components/particles.js"></script>
+    <script src="../components/loader.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

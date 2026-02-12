@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance - Talio | GPS Check-ins & Geofencing</title>
+    <meta name="description" content="Track employee attendance with GPS-enabled check-ins, geofencing, facial recognition, and real-time location tracking. Never miss a punch again.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="../../logo.webp">
+    <link rel="apple-touch-icon" href="../../logo.webp">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../modern.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="mira-canvas"></canvas>
+    
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="page-badge" data-aos="fade-up">
+                <i class="fas fa-clock"></i>
+                <span>Core Feature</span>
+            </div>
+            <h1 class="page-title" data-aos="fade-up" data-aos-delay="100">
+                Smart <span class="gradient-text">Attendance</span>
+            </h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
+                GPS-enabled check-ins with geofencing, facial recognition, and real-time tracking. 
+                Know exactly when and where your team is working.
+            </p>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#lead-form" class="btn btn-primary">Start Free Trial <i class="fas fa-arrow-right"></i></a>
+                <a href="#features" class="btn btn-outline">See Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="page-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Accuracy Rate</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">5min</span>
+                    <span class="stat-label">Setup Time</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">Time Saved</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Real-time Tracking</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Detail Section -->
+    <section class="feature-section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-sparkles"></i> Features</span>
+                <h2>Everything You Need for <span class="gradient-text">Perfect Attendance</span></h2>
+                <p>Comprehensive attendance tracking that works for any team size</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card liquid-glass" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>GPS Check-ins</h3>
+                    <p>Employees can check in from anywhere with precise GPS location tracking. Perfect for remote teams and field workers.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Real-time location capture</li>
+                        <li><i class="fas fa-check"></i> Address auto-detection</li>
+                        <li><i class="fas fa-check"></i> Location history</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-draw-polygon"></i>
+                    </div>
+                    <h3>Geofencing</h3>
+                    <p>Set up virtual boundaries around your office locations. Automatic check-in/out when employees enter or leave designated areas.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Custom zone creation</li>
+                        <li><i class="fas fa-check"></i> Auto clock-in/out</li>
+                        <li><i class="fas fa-check"></i> Multiple locations</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon green">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Facial Recognition</h3>
+                    <p>Optional biometric verification ensures that check-ins are authentic. Prevent buddy punching with advanced AI.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> AI-powered recognition</li>
+                        <li><i class="fas fa-check"></i> Anti-spoofing detection</li>
+                        <li><i class="fas fa-check"></i> Privacy-first design</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Dashboard</h3>
+                    <p>Live view of who's working, where they are, and their current status. Instant visibility for managers.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Live attendance feed</li>
+                        <li><i class="fas fa-check"></i> Team overview</li>
+                        <li><i class="fas fa-check"></i> Instant notifications</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon pink">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Native Android app for seamless check-ins on the go. Works offline and syncs when connected.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Offline mode</li>
+                        <li><i class="fas fa-check"></i> Push notifications</li>
+                        <li><i class="fas fa-check"></i> Quick check-in widget</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon cyan">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Automated Reports</h3>
+                    <p>Generate attendance reports automatically. Export to Excel, PDF, or integrate directly with payroll.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Custom report builder</li>
+                        <li><i class="fas fa-check"></i> Scheduled exports</li>
+                        <li><i class="fas fa-check"></i> Payroll integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-route"></i> How It Works</span>
+                <h2>Get Started in <span class="gradient-text">3 Simple Steps</span></h2>
+            </div>
+            
+            <div class="steps-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-card liquid-glass">
+                    <div class="step-number">1</div>
+                    <h3>Set Up Locations</h3>
+                    <p>Define your office locations and set up geofences on the map. Takes less than 5 minutes.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card liquid-glass">
+                    <div class="step-number">2</div>
+                    <h3>Invite Your Team</h3>
+                    <p>Add employees via email or CSV upload. They'll receive the app download link automatically.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card liquid-glass">
+                    <div class="step-number">3</div>
+                    <h3>Start Tracking</h3>
+                    <p>Employees check in via app. You see real-time attendance on your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="page-section">
+        <div class="container">
+            <div class="testimonial-card liquid-glass" data-aos="fade-up">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Talio's attendance system has saved us over 10 hours per week in manual tracking. The GPS and geofencing features are incredibly accurate, and the reports make payroll a breeze."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Johnson</strong>
+                            <span>HR Director, TechCorp Inc.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section class="lead-section" id="lead-form">
+        <div class="container">
+            <div class="lead-grid">
+                <div class="lead-info" data-aos="fade-right">
+                    <span class="section-badge"><i class="fas fa-rocket"></i> Get Started</span>
+                    <h2>Ready to Transform Your <span class="gradient-text">Attendance Tracking?</span></h2>
+                    <p>Join thousands of companies using Talio to streamline their operations. Fill out the form and our team will reach out within 24 hours.</p>
+                    
+                    <div class="lead-benefits">
+                        <div class="lead-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free 14-day trial</span>
+                        </div>
+                        <div class="lead-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No credit card required</span>
+                        </div>
+                        <div class="lead-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personal onboarding session</span>
+                        </div>
+                        <div class="lead-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                    
+                    <div class="lead-trust">
+                        <p>Trusted by 500+ companies worldwide</p>
+                        <div class="trust-logos">
+                            <i class="fas fa-building"></i>
+                            <i class="fas fa-industry"></i>
+                            <i class="fas fa-rocket"></i>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead-form-wrapper" data-aos="fade-left">
+                    <form class="lead-form" id="leadForm">
+                        <!-- Step 1: Personal Info -->
+                        <div class="form-step active" id="step1">
+                            <div class="step-header">
+                                <div class="step-indicator">
+                                    <div class="step-dot active">1</div>
+                                    <div class="step-line"></div>
+                                    <div class="step-dot">2</div>
+                                </div>
+                                <h3>Personal Information</h3>
+                                <p>Tell us about yourself</p>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Work Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title *</label>
+                                <input type="text" id="jobTitle" name="jobTitle" required placeholder="HR Manager">
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-block" id="nextStep">
+                                <span>Next Step</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Step 2: Company Info -->
+                        <div class="form-step" id="step2">
+                            <div class="step-header">
+                                <div class="step-indicator">
+                                    <div class="step-dot completed"><i class="fas fa-check"></i></div>
+                                    <div class="step-line active"></div>
+                                    <div class="step-dot active">2</div>
+                                </div>
+                                <h3>Company Information</h3>
+                                <p>Tell us about your organization</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyName">Company Name *</label>
+                                <input type="text" id="companyName" name="companyName" required placeholder="Acme Inc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="industry">Industry *</label>
+                                <select id="industry" name="industry" required>
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance & Banking</option>
+                                    <option value="retail">Retail & E-commerce</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="education">Education</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="marketing">Marketing & Advertising</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companySize">Company Size *</label>
+                                <select id="companySize" name="companySize" required>
+                                    <option value="">Select company size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="501-1000">501-1000 employees</option>
+                                    <option value="1000+">1000+ employees</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">How can we help you? (Optional)</label>
+                                <textarea id="message" name="message" rows="3" placeholder="Tell us about your attendance tracking challenges..."></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" id="prevStep">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <span>Back</span>
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="submitForm">
+                                    <span>Start Free Trial</span>
+                                    <i class="fas fa-rocket"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div class="form-success" id="formSuccess">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Thank You!</h3>
+                            <p>We've received your information. Our team will contact you within 24 hours to schedule your personalized demo.</p>
+                            <a href="../../index.html" class="btn btn-outline">Back to Home</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Features -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-th-large"></i> Related Features</span>
+                <h2>Works Great With</h2>
+            </div>
+            
+            <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);" data-aos="fade-up">
+                <a href="../payroll/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Auto Payroll</h3>
+                    <p>Attendance data flows directly into payroll calculations.</p>
+                </a>
+                <a href="../leaves/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon green">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Leave Management</h3>
+                    <p>Integrated leave tracking with attendance records.</p>
+                </a>
+                <a href="../workflows/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>AI Workflows</h3>
+                    <p>Automate attendance-based actions and alerts.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../components/loader.js"></script>
+    <script src="../../components/particles.js"></script>
+    <script src="../../components/lead-form.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+    </script>
+</body>
+</html>

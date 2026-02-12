@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talio - AI-Powered Workforce Management Platform</title>
+    <meta name="description" content="Transform your workforce management with Talio's AI-powered platform. Featuring MIRA AI assistant, smart attendance, payroll, project management, and more.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <link rel="apple-touch-icon" href="logo.webp">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Modern Styles -->
+    <link rel="stylesheet" href="modern.css">
+</head>
+<body>
+    <!-- Global Particle Canvas - Always visible, reacts to scroll -->
+    <canvas id="mira-canvas"></canvas>
+
+    <!-- Gradient overlay (global) -->
+    <div class="mira-gradient-overlay" id="miraGradient"></div>
+
+    <!-- Vignette effect (global) -->
+    <div class="mira-vignette" id="miraVignette"></div>
+
+    <!-- Animated Gradient Blobs -->
+    <div class="gradient-blobs" id="gradientBlobs">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+        <div class="gradient-blob blob-4"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-up">
+                    <i class="fas fa-bolt badge-icon"></i>
+                    <span>AI for Workforce Management</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    Manage your team.<br>
+                    <span class="gradient-text">10x smarter. 75% faster.</span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    Talio turns your workforce data into actionable insights, automated payroll, 
+                    and AI-powered decisions. All while you focus on growing your business.
+                </p>
+                
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hero-stat">
+                        <i class="fas fa-rocket hero-stat-icon"></i>
+                        <span class="hero-stat-text">Backed by top investors</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <i class="fas fa-star hero-stat-icon"></i>
+                        <span class="hero-stat-text">4.9/5 from 2,000+ customers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator for hero -->
+        <div class="hero-scroll-hint">
+            <span>Meet MIRA</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- =============================================
+         MIRA AI SECTION - Interactive Experience
+         ============================================= -->
+    <section class="mira-experience" id="mira">
+        <div class="mira-scroll-container" id="miraScrollContainer">
+            <div class="mira-viewport">
+
+                <!-- Layer 0: Intro -->
+                <div class="mira-content-layer" id="miraLayer0">
+                    <div class="mira-intro">
+                        <div class="mira-badge">
+                            <i class="fas fa-sparkles"></i>
+                            <span>Introducing MIRA</span>
+                        </div>
+                        <h2 class="mira-title">Your AI<br>Companion</h2>
+                        <p class="mira-subtitle">
+                            MIRA is an intelligent AI entity that understands your business, 
+                            learns from your data, and transforms workforce management.
+                        </p>
+                    </div>
+                    <div class="mira-scroll-hint">
+                        <span>Scroll to explore MIRA's powers</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <!-- Layer 1: Natural Language -->
+                <div class="mira-content-layer" id="miraLayer1">
+                    <div class="mira-feature-card">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="1"></canvas>
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 01</div>
+                            <h3 class="mira-feature-title">Natural Language Understanding</h3>
+                            <p class="mira-feature-description">
+                                Simply ask MIRA anything in plain English. "Who's on leave today?" or 
+                                "Show me overtime trends this quarter" - MIRA understands context and intent.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Context-aware</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Multi-language</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Voice enabled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2: Real-time Analytics -->
+                <div class="mira-content-layer" id="miraLayer2">
+                    <div class="mira-feature-card reverse">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="2"></canvas>
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 02</div>
+                            <h3 class="mira-feature-title">Real-time Analytics</h3>
+                            <p class="mira-feature-description">
+                                Get instant insights into your workforce. MIRA analyzes attendance patterns, 
+                                productivity metrics, and predicts trends before they impact your business.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Live dashboards</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Predictive insights</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Custom reports</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: Smart Automation -->
+                <div class="mira-content-layer" id="miraLayer3">
+                    <div class="mira-feature-card">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="3"></canvas>
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 03</div>
+                            <h3 class="mira-feature-title">Smart Automation</h3>
+                            <p class="mira-feature-description">
+                                MIRA automates repetitive HR tasks like leave approvals, shift assignments, 
+                                and payroll processing based on rules you define - or learns from your patterns.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Rule-based</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Pattern learning</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> 80% time saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 4: Proactive Insights -->
+                <div class="mira-content-layer" id="miraLayer4">
+                    <div class="mira-feature-card reverse">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="4"></canvas>
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 04</div>
+                            <h3 class="mira-feature-title">Proactive Insights</h3>
+                            <p class="mira-feature-description">
+                                Don't wait for problems - MIRA alerts you before they happen. Burnout risk, 
+                                understaffing predictions, compliance issues - get notified before it's too late.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Burnout detection</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Risk alerts</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Smart suggestions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 5: Conversational Interface -->
+                <div class="mira-content-layer" id="miraLayer5">
+                    <div class="mira-feature-card">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="5"></canvas>
+                                <i class="fas fa-comments"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 05</div>
+                            <h3 class="mira-feature-title">Conversational Interface</h3>
+                            <p class="mira-feature-description">
+                                Chat with MIRA like you would with a colleague. Ask follow-up questions, 
+                                request clarifications, and have natural back-and-forth conversations.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Memory context</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Follow-ups</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Natural chat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 6: Enterprise Security -->
+                <div class="mira-content-layer" id="miraLayer6">
+                    <div class="mira-feature-card reverse">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="6"></canvas>
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 06</div>
+                            <h3 class="mira-feature-title">Enterprise Security</h3>
+                            <p class="mira-feature-description">
+                                Your data stays private. MIRA uses enterprise-grade encryption, SOC2 compliance, 
+                                and role-based access control. Your AI, your data, your rules.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> SOC2 compliant</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> GDPR ready</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> On-premise option</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 7: Data Integration -->
+                <div class="mira-content-layer" id="miraLayer7">
+                    <div class="mira-feature-card">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="7"></canvas>
+                                <i class="fas fa-plug"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 07</div>
+                            <h3 class="mira-feature-title">Seamless Integrations</h3>
+                            <p class="mira-feature-description">
+                                MIRA connects with your existing tools - Slack, Teams, Google Workspace, 
+                                and 50+ other apps. No switching tabs, no context loss.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Slack & Teams</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> 50+ integrations</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> API access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 8: Learning Engine -->
+                <div class="mira-content-layer" id="miraLayer8">
+                    <div class="mira-feature-card reverse">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="8"></canvas>
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 08</div>
+                            <h3 class="mira-feature-title">Adaptive Learning</h3>
+                            <p class="mira-feature-description">
+                                MIRA learns from your organization's unique patterns and preferences. 
+                                The more you use it, the smarter and more personalized it becomes.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Pattern recognition</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Personalization</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Continuous learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 9: Actionable Commands -->
+                <div class="mira-content-layer" id="miraLayer9">
+                    <div class="mira-feature-card">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="9"></canvas>
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 09</div>
+                            <h3 class="mira-feature-title">Actionable Commands</h3>
+                            <p class="mira-feature-description">
+                                MIRA doesn't just answer - it acts. "Approve John's leave request" or 
+                                "Generate this month's payroll" - watch MIRA execute tasks instantly.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Execute actions</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Confirmation mode</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Undo support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 10: 24/7 Availability -->
+                <div class="mira-content-layer" id="miraLayer10">
+                    <div class="mira-feature-card reverse">
+                        <div class="mira-feature-visual">
+                            <div class="mira-feature-icon-wrapper">
+                                <canvas class="mira-feature-particles" data-layer="10"></canvas>
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="mira-feature-text">
+                            <div class="mira-feature-number">Feature 10</div>
+                            <h3 class="mira-feature-title">Always Available</h3>
+                            <p class="mira-feature-description">
+                                MIRA never sleeps. Get answers and automate tasks 24/7, across all time zones. 
+                                Your global team always has an AI assistant ready to help.
+                            </p>
+                            <div class="mira-feature-highlights">
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> 24/7 uptime</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Global support</span>
+                                <span class="mira-highlight-tag"><i class="fas fa-check"></i> Instant responses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress dots -->
+        <div class="mira-progress" id="miraProgress">
+            <div class="mira-progress-dot active" data-layer="0"></div>
+            <div class="mira-progress-dot" data-layer="1"></div>
+            <div class="mira-progress-dot" data-layer="2"></div>
+            <div class="mira-progress-dot" data-layer="3"></div>
+            <div class="mira-progress-dot" data-layer="4"></div>
+            <div class="mira-progress-dot" data-layer="5"></div>
+            <div class="mira-progress-dot" data-layer="6"></div>
+            <div class="mira-progress-dot" data-layer="7"></div>
+            <div class="mira-progress-dot" data-layer="8"></div>
+            <div class="mira-progress-dot" data-layer="9"></div>
+            <div class="mira-progress-dot" data-layer="10"></div>
+        </div>
+    </section>
+
+    <!-- Trusted By - Marquee -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-label">You've probably seen our work</p>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span class="marquee-item"><i class="fas fa-building"></i> TechCorp</span>
+                    <span class="marquee-item"><i class="fas fa-industry"></i> InnovateCo</span>
+                    <span class="marquee-item"><i class="fas fa-rocket"></i> StartupHub</span>
+                    <span class="marquee-item"><i class="fas fa-chart-line"></i> GrowthLabs</span>
+                    <span class="marquee-item"><i class="fas fa-globe"></i> GlobalTech</span>
+                    <span class="marquee-item"><i class="fas fa-code"></i> DevStudio</span>
+                    <span class="marquee-item"><i class="fas fa-cloud"></i> CloudNine</span>
+                    <span class="marquee-item"><i class="fas fa-database"></i> DataFlow</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span class="marquee-item"><i class="fas fa-building"></i> TechCorp</span>
+                    <span class="marquee-item"><i class="fas fa-industry"></i> InnovateCo</span>
+                    <span class="marquee-item"><i class="fas fa-rocket"></i> StartupHub</span>
+                    <span class="marquee-item"><i class="fas fa-chart-line"></i> GrowthLabs</span>
+                    <span class="marquee-item"><i class="fas fa-globe"></i> GlobalTech</span>
+                    <span class="marquee-item"><i class="fas fa-code"></i> DevStudio</span>
+                    <span class="marquee-item"><i class="fas fa-cloud"></i> CloudNine</span>
+                    <span class="marquee-item"><i class="fas fa-database"></i> DataFlow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         FEATURES OVERVIEW
+         ============================================= -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Everything You Need</h2>
+                <p class="section-description">A complete suite of tools designed to streamline your workforce management and boost productivity.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="bento-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="bento-title">Smart Attendance</h3>
+                    <p class="bento-description">GPS-enabled check-ins with geofencing and facial recognition.</p>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="bento-title">Auto Payroll</h3>
+                    <p class="bento-description">Calculate salaries, generate payslips, and stay tax compliant.</p>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="bento-title">Leave Management</h3>
+                    <p class="bento-description">Streamlined requests, approvals, and balance tracking.</p>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="bento-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h3 class="bento-title">Project Management</h3>
+                    <p class="bento-description">Kanban boards, task tracking, and team collaboration.</p>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="bento-title">Goals & OKRs</h3>
+                    <p class="bento-description">Set objectives, track key results, align your team.</p>
+                </div>
+
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="bento-title">AI Workflows</h3>
+                    <p class="bento-description">Automate repetitive tasks with intelligent automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         ATTENDANCE SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="attendance">
+        <div class="container">
+            <div class="feature-row" data-aos="fade-up">
+                <div class="feature-text">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h2 class="feature-title-large">Smart <span class="gradient-text">Attendance</span> Tracking</h2>
+                    <p class="feature-description-large">
+                        GPS-enabled check-ins with geofencing, facial recognition, and automatic overtime tracking. Never miss a punch again.
+                    </p>
+                    <ul class="feature-list-detailed">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Geofence Verification</h4>
+                                <p>Ensure employees check in from approved locations</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Real-time Tracking</h4>
+                                <p>Monitor attendance across all locations instantly</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Overtime Automation</h4>
+                                <p>Auto-calculate overtime based on your rules</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="mockup-title">Attendance Dashboard</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="dashboard-stats">
+                                <div class="dash-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span class="dash-stat-value">248</span>
+                                    <span class="dash-stat-label">Total Employees</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="dash-stat-value">96%</span>
+                                    <span class="dash-stat-label">Present Today</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span class="dash-stat-value">8.5h</span>
+                                    <span class="dash-stat-label">Avg Hours</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-chart">
+                                <div class="chart-bar" style="--h: 60%;"></div>
+                                <div class="chart-bar" style="--h: 85%;"></div>
+                                <div class="chart-bar" style="--h: 45%;"></div>
+                                <div class="chart-bar" style="--h: 92%;"></div>
+                                <div class="chart-bar active" style="--h: 78%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-check-circle"></i>
+                        <span>John checked in</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Office HQ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         PAYROLL SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="payroll">
+        <div class="container">
+            <div class="feature-row reverse" data-aos="fade-up">
+                <div class="feature-text">
+                    <div class="feature-icon-large green">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h2 class="feature-title-large">Effortless <span class="gradient-text">Payroll</span> Processing</h2>
+                    <p class="feature-description-large">
+                        Say goodbye to spreadsheet nightmares. Talio automates your entire payroll workflow from attendance data to final payslips.
+                    </p>
+                    <ul class="feature-list-detailed">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Auto Calculations</h4>
+                                <p>Calculate salaries based on attendance, overtime, and custom rules</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Digital Payslips</h4>
+                                <p>Generate and distribute professional payslips instantly</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Tax Compliance</h4>
+                                <p>Stay compliant with automatic tax deductions and statutory calculations</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="mockup-title">Payroll Dashboard</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="dashboard-stats">
+                                <div class="dash-stat">
+                                    <i class="fas fa-users"></i>
+                                    <span class="dash-stat-value">248</span>
+                                    <span class="dash-stat-label">Employees</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span class="dash-stat-value">$245K</span>
+                                    <span class="dash-stat-label">Total Payout</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="dash-stat-value">100%</span>
+                                    <span class="dash-stat-label">Processed</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-chart">
+                                <div class="chart-bar" style="--h: 70%;"></div>
+                                <div class="chart-bar" style="--h: 80%;"></div>
+                                <div class="chart-bar" style="--h: 65%;"></div>
+                                <div class="chart-bar" style="--h: 90%;"></div>
+                                <div class="chart-bar active" style="--h: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Payslips generated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         PROJECT MANAGEMENT SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="projects">
+        <div class="container">
+            <div class="feature-row" data-aos="fade-up">
+                <div class="feature-text">
+                    <div class="feature-icon-large purple">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h2 class="feature-title-large">Talio <span class="gradient-text">Projects</span></h2>
+                    <p class="feature-description-large">
+                        A powerful Kanban-style board for managing projects, tasks, and team collaboration with intuitive drag-and-drop functionality.
+                    </p>
+                    <ul class="feature-list-detailed">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Drag & Drop Interface</h4>
+                                <p>Move tasks between columns with ease</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Team Collaboration</h4>
+                                <p>Assign tasks, add comments, and track progress</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Custom Labels & Views</h4>
+                                <p>Organize with colors, priorities, and due dates</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="mockup-title">Project Board</span>
+                        </div>
+                        <div class="mockup-body" style="display: flex; gap: 12px;">
+                            <div style="flex: 1; background: var(--bg-tertiary); border-radius: 8px; padding: 12px;">
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">To Do</div>
+                                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; margin-bottom: 8px;">
+                                    <span style="font-size: 0.7rem; background: rgba(99, 102, 241, 0.2); color: var(--accent-primary); padding: 2px 8px; border-radius: 4px;">Feature</span>
+                                    <p style="font-size: 0.85rem; margin-top: 8px;">Implement auth</p>
+                                </div>
+                                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px;">
+                                    <span style="font-size: 0.7rem; background: rgba(139, 92, 246, 0.2); color: #8b5cf6; padding: 2px 8px; border-radius: 4px;">Design</span>
+                                    <p style="font-size: 0.85rem; margin-top: 8px;">Update UI</p>
+                                </div>
+                            </div>
+                            <div style="flex: 1; background: var(--bg-tertiary); border-radius: 8px; padding: 12px;">
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">In Progress</div>
+                                <div style="background: var(--bg-card); border: 1px solid var(--accent-primary); border-radius: 6px; padding: 10px;">
+                                    <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 4px;">Backend</span>
+                                    <p style="font-size: 0.85rem; margin-top: 8px;">API Integration</p>
+                                    <div style="background: var(--bg-tertiary); border-radius: 4px; height: 4px; margin-top: 8px;">
+                                        <div style="background: var(--accent-primary); height: 100%; width: 65%; border-radius: 4px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 1; background: var(--bg-tertiary); border-radius: 8px; padding: 12px;">
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Done <i class="fas fa-check"></i></div>
+                                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; opacity: 0.7;">
+                                    <p style="font-size: 0.85rem; text-decoration: line-through;">Onboarding flow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         GOALS & OKRs SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="goals">
+        <div class="container">
+            <div class="feature-row reverse" data-aos="fade-up">
+                <div class="feature-text">
+                    <div class="feature-icon-large orange">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 class="feature-title-large">Set <span class="gradient-text">Ambitious Goals</span></h2>
+                    <p class="feature-description-large">
+                        Define company-wide objectives, break them into key results, and track progress in real-time. Align your entire team towards shared success.
+                    </p>
+                    <ul class="feature-list-detailed">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Cascading Goals</h4>
+                                <p>Align team goals with company objectives automatically</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Real-time Progress</h4>
+                                <p>See progress as it happens with live dashboards</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Achievement Tracking</h4>
+                                <p>Celebrate wins and learn from misses</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="mockup-title">Goals & OKRs</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div style="background: var(--bg-tertiary); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <div style="width: 40px; height: 40px; background: rgba(249, 115, 22, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-bullseye" style="color: #f97316;"></i>
+                                        </div>
+                                        <div>
+                                            <h4 style="font-size: 1rem; margin-bottom: 4px;">Q1 Sales Target</h4>
+                                            <span style="font-size: 0.75rem; color: #10b981;">On Track</span>
+                                        </div>
+                                    </div>
+                                    <span style="font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">78%</span>
+                                </div>
+                                <div style="background: var(--bg-card); border-radius: 6px; height: 8px; overflow: hidden;">
+                                    <div style="background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); height: 100%; width: 78%;"></div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
+                                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                                    <span style="flex: 1; font-size: 0.9rem;">Increase revenue by 25%</span>
+                                    <span style="font-size: 0.85rem; color: var(--accent-primary);">92%</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
+                                    <i class="fas fa-circle" style="color: var(--text-muted); font-size: 0.7rem;"></i>
+                                    <span style="flex: 1; font-size: 0.9rem;">Acquire 50 new clients</span>
+                                    <span style="font-size: 0.85rem; color: var(--accent-primary);">64%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         AI WORKFLOWS SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="workflows">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Automation</span>
+                <h2 class="section-title">AI-Powered <span class="gradient-text">Workflows</span></h2>
+                <p class="section-description">Automate repetitive tasks and create smart workflows that save hours every week.</p>
+            </div>
+
+            <div class="workflow-diagram" data-aos="fade-up">
+                <div class="workflow-node">
+                    <div class="node-icon"><i class="fas fa-bolt"></i></div>
+                    <span>Trigger</span>
+                    <p>Leave Request</p>
+                </div>
+                
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                
+                <div class="workflow-node">
+                    <div class="node-icon"><i class="fas fa-code-branch"></i></div>
+                    <span>Condition</span>
+                    <p>Check Balance</p>
+                </div>
+                
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                
+                <div class="workflow-node">
+                    <div class="node-icon"><i class="fas fa-robot"></i></div>
+                    <span>AI Action</span>
+                    <p>Auto Approve</p>
+                </div>
+                
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                
+                <div class="workflow-node">
+                    <div class="node-icon"><i class="fas fa-bell"></i></div>
+                    <span>Notify</span>
+                    <p>Send Alert</p>
+                </div>
+            </div>
+
+            <div class="workflow-templates" data-aos="fade-up">
+                <div class="workflow-template">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>Employee Onboarding</h4>
+                    <p>Automate welcome emails, documents, and training</p>
+                </div>
+                <div class="workflow-template">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Leave Approvals</h4>
+                    <p>Smart routing based on type and coverage</p>
+                </div>
+                <div class="workflow-template">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h4>Expense Reports</h4>
+                    <p>Auto-categorize and route for approval</p>
+                </div>
+                <div class="workflow-template">
+                    <i class="fas fa-clock"></i>
+                    <h4>Overtime Alerts</h4>
+                    <p>Notify when thresholds are exceeded</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         APPS SECTION
+         ============================================= -->
+    <section class="feature-detail-section" id="apps">
+        <div class="container">
+            <div class="feature-row" data-aos="fade-up">
+                <div class="feature-text">
+                    <div class="feature-icon-large cyan">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h2 class="feature-title-large">Works <span class="gradient-text">Everywhere</span></h2>
+                    <p class="feature-description-large">
+                        Access Talio from anywhere with our native mobile app, desktop productivity monitor, and web dashboard.
+                    </p>
+                    <ul class="feature-list-detailed">
+                        <li>
+                            <i class="fab fa-android"></i>
+                            <div>
+                                <h4>Android App</h4>
+                                <p>Full-featured mobile app for on-the-go management</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-windows"></i>
+                            <div>
+                                <h4>Desktop App</h4>
+                                <p>Productivity monitoring with screenshots and activity tracking</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Web Dashboard</h4>
+                                <p>Full admin access from any browser</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 32px;">
+                        <a href="downloads/index.html" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            <span>Download Apps</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    <div style="display: flex; gap: 24px; align-items: center; justify-content: center;">
+                        <div style="width: 160px; height: 320px; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 24px; padding: 8px; position: relative;">
+                            <div style="width: 100%; height: 100%; background: var(--bg-tertiary); border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+                                <img src="logo.webp" alt="Talio" style="width: 48px; height: 48px; border-radius: 12px;">
+                                <span style="font-size: 0.9rem; font-weight: 600;">Talio Mobile</span>
+                                <span style="font-size: 0.7rem; color: var(--text-muted);">Android App</span>
+                            </div>
+                        </div>
+                        <div style="width: 280px; height: 200px; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 12px; padding: 4px;">
+                            <div style="background: var(--bg-tertiary); border-radius: 8px; height: 100%; display: flex; flex-direction: column;">
+                                <div style="display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid var(--border-color);">
+                                    <span style="width: 8px; height: 8px; background: #ef4444; border-radius: 50%;"></span>
+                                    <span style="width: 8px; height: 8px; background: #eab308; border-radius: 50%;"></span>
+                                    <span style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%;"></span>
+                                </div>
+                                <div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                                    <img src="logo.webp" alt="Talio" style="width: 40px; height: 40px; border-radius: 10px;">
+                                    <div>
+                                        <div style="font-size: 0.9rem; font-weight: 600;">Talio Desktop</div>
+                                        <div style="font-size: 0.7rem; color: var(--text-muted);">Windows App</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-header" data-aos="fade-up">
+                <h2 class="section-title">AI trained on millions of workforce data points</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-suffix">M+</span>
+                    <span class="stat-label">data points processed</span>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">companies trust Talio</span>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-number" data-count="75">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">time saved on HR tasks</span>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-number" data-count="99">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">uptime guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">Choose the plan that fits your team. No hidden fees.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="pricing-name">Starter</h3>
+                    <p class="pricing-desc">For small teams</p>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">9</span>
+                        <span class="price-period">/user/mo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 25 employees</li>
+                        <li><i class="fas fa-check"></i> Attendance tracking</li>
+                        <li><i class="fas fa-check"></i> Leave management</li>
+                        <li><i class="fas fa-check"></i> Basic reporting</li>
+                        <li><i class="fas fa-check"></i> Mobile app</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3 class="pricing-name">Professional</h3>
+                    <p class="pricing-desc">For growing teams</p>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">19</span>
+                        <span class="price-period">/user/mo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 100 employees</li>
+                        <li><i class="fas fa-check"></i> Everything in Starter</li>
+                        <li><i class="fas fa-check"></i> MIRA AI Assistant</li>
+                        <li><i class="fas fa-check"></i> Project management</li>
+                        <li><i class="fas fa-check"></i> Goals & OKRs</li>
+                        <li><i class="fas fa-check"></i> Desktop app</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="pricing-name">Enterprise</h3>
+                    <p class="pricing-desc">For large orgs</p>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">39</span>
+                        <span class="price-period">/user/mo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited employees</li>
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> AI Workflows</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Loved by teams worldwide</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <p class="testimonial-text">"Talio transformed how we manage our remote team. MIRA saves us hours every week with automated reports."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sarah Kim</h4>
+                            <span>HR Director, TechCorp</span>
+                        </div>
+                    </div>
+                    <span class="testimonial-date">Jan 2026</span>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="50">
+                    <p class="testimonial-text">"The AI workflows have eliminated so much manual work. Our HR team can finally focus on people, not paperwork."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Roberts</h4>
+                            <span>CTO, InnovateCo</span>
+                        </div>
+                    </div>
+                    <span class="testimonial-date">Dec 2025</span>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <p class="testimonial-text">"Setup took 10 minutes and the team loved it from day one. Finally, an HR platform that just works."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <h4>Amanda Lee</h4>
+                            <span>Founder, StartupHub</span>
+                        </div>
+                    </div>
+                    <span class="testimonial-date">Jan 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is MIRA?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MIRA is Talio's built-in AI assistant. It understands natural language, automates tasks, provides real-time insights, and helps you manage your workforce more efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is Talio different from other HR tools?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Talio was built with AI at its core. MIRA learns from your data and provides actionable insights - not just reports. Plus, we combine HR, payroll, projects, and goals in one platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is there a free trial?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 14-day free trial with full access to all features. No credit card required to start.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my data secure?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Your data stays private and is never shared. We use enterprise-grade encryption and comply with global data protection standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Lead Form -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-lead-container" data-aos="fade-up">
+                <div class="cta-info">
+                    <h2 class="cta-title">Ready to manage your team smarter?</h2>
+                    <p class="cta-subtitle">Start your free 14-day trial and see the difference AI makes.</p>
+                    <div class="cta-benefits">
+                        <div class="cta-benefit"><i class="fas fa-check-circle"></i> 14-day free trial</div>
+                        <div class="cta-benefit"><i class="fas fa-check-circle"></i> No credit card required</div>
+                        <div class="cta-benefit"><i class="fas fa-check-circle"></i> Cancel anytime</div>
+                    </div>
+                </div>
+                <div class="cta-form-wrapper">
+                    <form class="lead-form" id="leadForm">
+                        <div class="lead-form-row">
+                            <div class="lead-form-group">
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="lead-form-group">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="lead-form-group">
+                            <input type="email" id="email" name="email" placeholder="Work Email" required>
+                        </div>
+                        <div class="lead-form-row">
+                            <div class="lead-form-group">
+                                <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+                            </div>
+                            <div class="lead-form-group">
+                                <select id="companySize" name="companySize" required>
+                                    <option value="">Company Size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="501+">501+ employees</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" id="source" name="source" value="homepage-cta">
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            <span>Get Started Free</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <h3>You're all set!</h3>
+                        <p>We'll send you login details shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Modern JavaScript -->
+    <script src="modern.js"></script>
+    
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+    
+    <!-- MIRA Global Particle System Script -->
+    <script>
+    /**
+     * MIRA AI - Optimized Global Particle System
+     * - Reduced particle count for performance
+     * - Simplified rendering without expensive shadow blur
+     * - Frame-rate optimized animation
+     */
+    (function() {
+        const TOTAL_LAYERS = 12;
+        const blobsContainer = document.getElementById('gradientBlobs');
+        let blobsVisible = false;
+        
+        class MiraParticleSystem {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                if (!this.canvas) return;
+                
+                this.ctx = this.canvas.getContext('2d', { alpha: true });
+                this.particles = [];
+                this.mouse = { x: 0, y: 0, isActive: false };
+                
+                // Optimized particle count for smooth performance
+                // Keep globe size consistent - minimum 280px radius for mobile, same as desktop proportion
+                const desktopRadius = Math.min(window.innerWidth, window.innerHeight) * 0.35;
+                const mobileMinRadius = 280; // Fixed minimum size for mobile
+                this.config = {
+                    particleCount: 1800,
+                    baseRadius: Math.max(desktopRadius, mobileMinRadius),
+                };
+                
+                this.SPRING = 0.018;
+                this.FRICTION = 0.9;
+                this.Z_PERSPECTIVE = 600;
+                
+                this.mode = 'globe';
+                this.currentSection = 'hero';
+                this.scrollProgress = 0;
+                this.globalScroll = 0;
+                
+                this.globeX = window.innerWidth / 2;
+                this.globeY = window.innerHeight / 2;
+                this.targetGlobeX = window.innerWidth / 2;
+                this.targetGlobeY = window.innerHeight / 2;
+                this.globeScale = 1;
+                this.targetGlobeScale = 1;
+                
+                // Galaxy/planet mode properties
+                this.galaxyRotation = 0;
+                this.planetGlow = 0;
+                
+                this.featureIconPositions = [];
+                this.activeFeatureIndex = -1;
+                this.prevFeatureIndex = -1;
+                this.featureTransition = 0;
+                this.transitionStartTime = 0;
+                this.galaxyTransition = 0;
+                this.initialized = false;
+                
+                // Performance: throttle resize
+                this.resizeTimeout = null;
+                
+                this.init();
+                this.bindEvents();
+                this.cacheFeaturePositions();
+                this.animate();
+            }
+
+            init() {
+                this.resize();
+                this.particles = [];
+                const { particleCount, baseRadius } = this.config;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const phi = Math.acos(1 - 2 * (i + 0.5) / particleCount);
+                    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+                    
+                    const x = baseRadius * Math.sin(phi) * Math.cos(theta);
+                    const y = baseRadius * Math.sin(phi) * Math.sin(theta);
+                    const z = baseRadius * Math.cos(phi);
+                    
+                    // Galaxy properties - edge-heavy density (more particles at outer edges)
+                    // Use power < 0.5 for edge-heavy distribution
+                    const densityRandom = Math.random();
+                    const galaxyRadius = 20 + Math.pow(densityRandom, 0.3) * 480; // Edge-heavy, full spread
+                    const galaxyAngle = Math.random() * Math.PI * 2;
+                    
+                    this.particles.push({
+                        baseX: x, baseY: y, baseZ: z,
+                        x, y, z,
+                        vx: 0, vy: 0, vz: 0,
+                        size: 0.8 + Math.random() * 2.5, // Varied sizes
+                        alpha: 0.4 + Math.random() * 0.5,
+                        hue: 250 + Math.random() * 30,
+                        targetX: x, targetY: y, targetZ: z,
+                        expandAngle: Math.random() * Math.PI * 2,
+                        galaxyRadius,
+                        galaxyAngle,
+                        galaxyZ: (Math.random() - 0.5) * 40,
+                        prevX: x, prevY: y,
+                    });
+                }
+            }
+
+            resize() {
+                // Throttle resize for performance
+                clearTimeout(this.resizeTimeout);
+                this.resizeTimeout = setTimeout(() => {
+                    const dpr = Math.min(window.devicePixelRatio || 1, 1.5); // Cap DPR for performance
+                    const width = window.innerWidth;
+                    const height = window.innerHeight;
+                    
+                    this.canvas.width = width * dpr;
+                    this.canvas.height = height * dpr;
+                    this.canvas.style.width = width + 'px';
+                    this.canvas.style.height = height + 'px';
+                    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                    
+                    this.config.baseRadius = Math.min(width, height) * 0.35;
+                }, 100);
+            }
+
+            cacheFeaturePositions() {
+                const featureVisuals = document.querySelectorAll('.mira-feature-visual');
+                this.featureIconPositions = [];
+                
+                featureVisuals.forEach(visual => {
+                    const rect = visual.getBoundingClientRect();
+                    this.featureIconPositions.push({
+                        x: rect.left + rect.width / 2,
+                        y: rect.top + rect.height / 2,
+                    });
+                });
+            }
+
+            bindEvents() {
+                window.addEventListener('resize', () => {
+                    this.resize();
+                    this.cacheFeaturePositions();
+                });
+                
+                // Throttle mouse tracking
+                let mouseThrottle = false;
+                window.addEventListener('mousemove', (e) => {
+                    if (mouseThrottle) return;
+                    mouseThrottle = true;
+                    this.mouse.x = e.clientX;
+                    this.mouse.y = e.clientY;
+                    this.mouse.isActive = true;
+                    setTimeout(() => mouseThrottle = false, 50);
+                });
+                
+                window.addEventListener('mouseleave', () => {
+                    this.mouse.isActive = false;
+                });
+                
+                this.setupScroll();
+            }
+
+            setupScroll() {
+                const scrollContainer = document.getElementById('miraScrollContainer');
+                const heroSection = document.getElementById('hero');
+                const miraGradient = document.getElementById('miraGradient');
+                const miraVignette = document.getElementById('miraVignette');
+                const miraProgress = document.getElementById('miraProgress');
+                const progressDots = document.querySelectorAll('.mira-progress-dot');
+                const layers = [];
+                
+                for (let i = 0; i <= 10; i++) {
+                    layers.push(document.getElementById(`miraLayer${i}`));
+                }
+                
+                if (!scrollContainer) return;
+                
+                const update = () => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    this.globalScroll = scrollTop / docHeight;
+                    
+                    const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 0;
+                    const containerTop = scrollContainer.offsetTop;
+                    const containerHeight = scrollContainer.offsetHeight;
+                    const viewportHeight = window.innerHeight;
+                    
+                    const inHero = scrollTop < heroBottom - viewportHeight * 0.3;
+                    const scrollInSection = scrollTop - containerTop;
+                    const sectionScrollLength = containerHeight - viewportHeight;
+                    const progress = Math.max(0, Math.min(1, scrollInSection / sectionScrollLength));
+                    
+                    this.scrollProgress = progress;
+                    
+                    const introThreshold = 0.15;
+                    const layerProgress = Math.max(0, (progress - introThreshold) / (1 - introThreshold)) * 10;
+                    const currentLayerIndex = Math.min(10, Math.max(0, Math.floor(layerProgress)));
+                    
+                    const inMiraSection = scrollInSection > -viewportHeight * 0.3 && scrollInSection < sectionScrollLength - viewportHeight * 0.2;
+                    const pastMiraSection = scrollTop > containerTop + containerHeight - viewportHeight * 0.8;
+                    
+                    if (inHero) {
+                        this.mode = 'globe';
+                        this.currentSection = 'hero';
+                        // Position globe so exactly half is visible at bottom of viewport - BIGGER in hero
+                        this.targetGlobeX = window.innerWidth / 2;
+                        this.targetGlobeY = viewportHeight + (this.config.baseRadius * 0.6);
+                        this.targetGlobeScale = 1.5;
+                        this.activeFeatureIndex = -1;
+                    } else if (inMiraSection && progress < introThreshold) {
+                        this.mode = 'globe';
+                        this.currentSection = 'mira-intro';
+                        // Center globe with the "Your AI Companion" text - shrink to normal
+                        this.targetGlobeX = window.innerWidth / 2;
+                        this.targetGlobeY = viewportHeight * 0.5;
+                        this.targetGlobeScale = 0.85;
+                        this.activeFeatureIndex = -1;
+                    } else if (inMiraSection && progress >= introThreshold) {
+                        this.mode = 'hidden';
+                        this.currentSection = 'mira-features';
+                        this.activeFeatureIndex = currentLayerIndex;
+                    } else if (pastMiraSection) {
+                        // Calculate transition from globe to galaxy - starts immediately as MIRA ends
+                        const transitionStart = containerTop + containerHeight - viewportHeight * 0.8;
+                        const transitionEnd = transitionStart + viewportHeight * 0.5;
+                        const transitionProgress = Math.max(0, Math.min(1, (scrollTop - transitionStart) / (transitionEnd - transitionStart)));
+                        
+                        this.galaxyTransition = transitionProgress;
+                        this.mode = 'galaxy';
+                        this.currentSection = 'post-mira';
+                        this.activeFeatureIndex = -1;
+                        // Galaxy rotation based on scroll
+                        this.galaxyRotation = (scrollTop - containerTop - containerHeight) * 0.0006;
+                        this.planetGlow = Math.min(1, transitionProgress * 1.5);
+                        // Globe shrinks to 10% (30% smaller than previous 15%)
+                        this.targetGlobeScale = 0.7 - transitionProgress * 0.6; // 0.7 -> 0.1
+                    } else {
+                        this.mode = 'galaxy';
+                        this.currentSection = 'other';
+                        this.activeFeatureIndex = -1;
+                        this.galaxyRotation = this.globalScroll * Math.PI * 1.2;
+                        this.planetGlow = 0.8;
+                    }
+
+                    if (!this.initialized) {
+                        this.globeX = this.targetGlobeX;
+                        this.globeY = this.targetGlobeY;
+                        this.globeScale = this.targetGlobeScale;
+                        this.initialized = true;
+                    }
+                    
+                    layers.forEach((layer, index) => {
+                        if (!layer) return;
+                        layer.classList.remove('active', 'exiting');
+                        
+                        if (inMiraSection && progress < introThreshold && index === 0) {
+                            layer.classList.add('active');
+                        } else if (inMiraSection && progress >= introThreshold && index === currentLayerIndex + 1) {
+                            layer.classList.add('active');
+                        } else if (inMiraSection && progress >= introThreshold && index === currentLayerIndex) {
+                            layer.classList.add('exiting');
+                        }
+                    });
+                    
+                    if (layers[0] && inMiraSection && progress < introThreshold) {
+                        layers[0].classList.add('active');
+                        layers[0].classList.remove('exiting');
+                    }
+                    
+                    const activeDotIndex = progress < introThreshold ? 0 : currentLayerIndex + 1;
+                    progressDots.forEach((dot, index) => {
+                        dot.classList.toggle('active', inMiraSection && index === activeDotIndex);
+                    });
+                    
+                    if (miraProgress) {
+                        miraProgress.classList.toggle('visible', inMiraSection && scrollInSection > 0);
+                    }
+                    
+                    if (miraGradient && inMiraSection) {
+                        const hue = 250 + currentLayerIndex * 8;
+                        miraGradient.style.background = `radial-gradient(ellipse at 50% 50%, hsla(${hue}, 70%, 50%, 0.15) 0%, transparent 50%)`;
+                        miraGradient.classList.add('active');
+                    } else if (miraGradient) {
+                        miraGradient.classList.remove('active');
+                    }
+                    
+                    if (miraVignette) {
+                        miraVignette.classList.toggle('active', inMiraSection);
+                    }
+                };
+                
+window.addEventListener('scroll', () => {
+                    update();
+                    
+                    // Mobile viewport fixing - use JS since CSS sticky doesn't work reliably
+                    if (window.innerWidth <= 768) {
+                        const viewport = scrollContainer.querySelector('.mira-viewport');
+                        if (viewport) {
+                            const containerRect = scrollContainer.getBoundingClientRect();
+                            const containerTop = containerRect.top;
+                            const containerBottom = containerRect.bottom;
+                            const viewportHeight = window.innerHeight;
+                            
+                            // Check if we're in the MIRA section
+                            if (containerTop <= 0 && containerBottom > viewportHeight) {
+                                // Fix viewport to screen
+                                viewport.style.position = 'fixed';
+                                viewport.style.top = '0';
+                                viewport.style.left = '0';
+                                viewport.style.width = '100%';
+                                viewport.style.height = '100vh';
+                            } else if (containerBottom <= viewportHeight && containerBottom > 0) {
+                                // Reached end - position at bottom of container
+                                viewport.style.position = 'absolute';
+                                viewport.style.top = 'auto';
+                                viewport.style.bottom = '0';
+                                viewport.style.left = '0';
+                                viewport.style.width = '100%';
+                                viewport.style.height = '100vh';
+                            } else {
+                                // Before section - reset to normal
+                                viewport.style.position = 'relative';
+                                viewport.style.top = '';
+                                viewport.style.bottom = '';
+                                viewport.style.left = '';
+                                viewport.style.width = '';
+                                viewport.style.height = '100vh';
+                            }
+                        }
+                    }
+                });
+                
+                update();
+                
+                progressDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        const containerTop = scrollContainer.offsetTop;
+                        const sectionScrollLength = scrollContainer.offsetHeight - window.innerHeight;
+                        const introThreshold = 0.15;
+                        
+                        let targetProgress;
+                        if (index === 0) {
+                            targetProgress = 0;
+                        } else {
+                            targetProgress = introThreshold + ((index - 1) / 10) * (1 - introThreshold);
+                        }
+                        
+                        window.scrollTo({ 
+                            top: containerTop + targetProgress * sectionScrollLength, 
+                            behavior: 'smooth' 
+                        });
+                    });
+                });
+            }
+
+            setupMobileScroll(scrollContainer, layers, miraGradient, miraVignette, miraProgress, progressDots) {
+                let currentLayer = 0;
+                const totalLayers = 11; // 0 = intro, 1-10 = features
+                let isLocked = false;
+                let touchStartY = 0;
+                let touchCurrentY = 0;
+                const swipeThreshold = 40; // px to trigger layer change
+                let isTransitioning = false;
+                let lastScrollY = 0;
+                
+                const viewport = scrollContainer.querySelector('.mira-viewport');
+                const heroSection = document.getElementById('hero');
+                
+                const updateLayerDisplay = (layerIndex) => {
+                    layers.forEach((layer, index) => {
+                        if (!layer) return;
+                        layer.classList.remove('active', 'exiting');
+                        if (index === layerIndex) {
+                            layer.classList.add('active');
+                        } else if (index === layerIndex - 1) {
+                            layer.classList.add('exiting');
+                        }
+                    });
+                    
+                    // Update progress dots
+                    progressDots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === layerIndex);
+                    });
+                    
+                    // Update gradient
+                    if (miraGradient) {
+                        const hue = 250 + layerIndex * 8;
+                        miraGradient.style.background = `radial-gradient(ellipse at 50% 50%, hsla(${hue}, 70%, 50%, 0.15) 0%, transparent 50%)`;
+                        miraGradient.classList.add('active');
+                    }
+                    
+                    if (miraVignette) {
+                        miraVignette.classList.add('active');
+                    }
+                    
+                    if (miraProgress) {
+                        miraProgress.classList.add('visible');
+                    }
+                    
+                    // Update particle system mode
+                    if (layerIndex === 0) {
+                        this.mode = 'globe';
+                        this.currentSection = 'mira-intro';
+                        this.targetGlobeX = window.innerWidth / 2;
+                        this.targetGlobeY = window.innerHeight * 0.5;
+                        this.targetGlobeScale = 0.85;
+                        this.activeFeatureIndex = -1;
+                    } else {
+                        this.mode = 'hidden';
+                        this.currentSection = 'mira-features';
+                        this.activeFeatureIndex = layerIndex - 1;
+                    }
+                };
+                
+                const lockScroll = () => {
+                    if (!isLocked) {
+                        isLocked = true;
+                        lastScrollY = window.scrollY;
+                        document.body.classList.add('mira-scroll-locked');
+                        document.body.style.overflow = 'hidden';
+                        document.body.style.position = 'fixed';
+                        document.body.style.top = `-${lastScrollY}px`;
+                        document.body.style.width = '100%';
+                    }
+                };
+                
+                const unlockScroll = (newScrollY) => {
+                    if (isLocked) {
+                        isLocked = false;
+                        document.body.classList.remove('mira-scroll-locked');
+                        document.body.style.overflow = '';
+                        document.body.style.position = '';
+                        document.body.style.top = '';
+                        document.body.style.width = '';
+                        window.scrollTo(0, newScrollY !== undefined ? newScrollY : lastScrollY);
+                        
+                        // Hide MIRA effects
+                        if (miraGradient) miraGradient.classList.remove('active');
+                        if (miraVignette) miraVignette.classList.remove('active');
+                        if (miraProgress) miraProgress.classList.remove('visible');
+                    }
+                };
+                
+                const goToLayer = (newLayer) => {
+                    if (isTransitioning) return;
+                    if (newLayer < 0 || newLayer >= totalLayers) return;
+                    
+                    isTransitioning = true;
+                    currentLayer = newLayer;
+                    updateLayerDisplay(currentLayer);
+                    
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 400);
+                };
+                
+                // Check if we should lock based on scroll position
+                const checkScrollLock = () => {
+                    if (isLocked) return;
+                    
+                    const scrollY = window.scrollY;
+                    const containerTop = scrollContainer.offsetTop;
+                    const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 0;
+                    
+                    // Only lock when user has scrolled past hero AND MIRA section is at top of viewport
+                    if (scrollY >= heroBottom && scrollY >= containerTop - 50) {
+                        currentLayer = 0;
+                        updateLayerDisplay(0);
+                        lockScroll();
+                    }
+                };
+                
+                window.addEventListener('scroll', checkScrollLock, { passive: true });
+                
+                // Touch event handlers
+                document.addEventListener('touchstart', (e) => {
+                    touchStartY = e.touches[0].clientY;
+                    touchCurrentY = touchStartY;
+                }, { passive: true });
+                
+                document.addEventListener('touchmove', (e) => {
+                    if (!isLocked) return;
+                    e.preventDefault();
+                    touchCurrentY = e.touches[0].clientY;
+                }, { passive: false });
+                
+                document.addEventListener('touchend', () => {
+                    if (!isLocked || isTransitioning) return;
+                    
+                    const touchDelta = touchStartY - touchCurrentY;
+                    
+                    if (Math.abs(touchDelta) > swipeThreshold) {
+                        if (touchDelta > 0) {
+                            // Swiped up - go to next layer
+                            if (currentLayer < totalLayers - 1) {
+                                goToLayer(currentLayer + 1);
+                            } else {
+                                // On last layer, unlock scroll to continue past MIRA
+                                const exitScrollY = scrollContainer.offsetTop + scrollContainer.offsetHeight;
+                                unlockScroll(exitScrollY);
+                            }
+                        } else {
+                            // Swiped down - go to previous layer
+                            if (currentLayer > 0) {
+                                goToLayer(currentLayer - 1);
+                            } else {
+                                // On first layer, unlock scroll to go back to hero
+                                const heroScrollY = heroSection ? heroSection.offsetTop + heroSection.offsetHeight - window.innerHeight : 0;
+                                unlockScroll(heroScrollY);
+                            }
+                        }
+                    }
+                }, { passive: true });
+                
+                // Handle dot clicks
+                progressDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        if (isLocked) {
+                            goToLayer(index);
+                        }
+                    });
+                });
+            }
+
+            animate() {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                const cx = width / 2;
+                const cy = height / 2;
+                
+                this.ctx.clearRect(0, 0, width, height);
+                
+                // Skip rendering in hidden mode (features section uses FeatureParticles)
+                if (this.mode === 'hidden') {
+                    // Show gradient blobs in features section
+                    if (blobsContainer && !blobsVisible) {
+                        blobsContainer.classList.add('visible');
+                        blobsVisible = true;
+                    }
+                    requestAnimationFrame(() => this.animate());
+                    return;
+                }
+                
+                this.globeX += (this.targetGlobeX - this.globeX) * 0.12;
+                this.globeY += (this.targetGlobeY - this.globeY) * 0.12;
+                this.globeScale += (this.targetGlobeScale - this.globeScale) * 0.12;
+
+                const time = Date.now() * 0.0006;
+                const rotationSpeed = 0.6;
+                
+                this.ctx.globalCompositeOperation = 'lighter';
+                
+                this.particles.forEach((p, i) => {
+                    if (this.mode === 'globe') {
+                        const tx = p.baseX * Math.cos(time * rotationSpeed) - p.baseZ * Math.sin(time * rotationSpeed);
+                        const tz = p.baseX * Math.sin(time * rotationSpeed) + p.baseZ * Math.cos(time * rotationSpeed);
+                        const ty = p.baseY;
+                        
+                        p.targetX = tx * this.globeScale;
+                        p.targetY = ty * this.globeScale;
+                        p.targetZ = tz * this.globeScale;
+                        
+                    } else if (this.mode === 'galaxy') {
+                        // Milky Way - particles spread with edge-heavy density
+                        const scrollRotation = this.galaxyRotation;
+                        const baseRotation = time * 0.05;
+                        const rotation = scrollRotation + baseRotation;
+                        
+                        // Galaxy transition: interpolate between globe and galaxy positions
+                        const galaxyT = this.galaxyTransition || 1;
+                        
+                        // Use particle's stored galaxy properties
+                        const angle = p.galaxyAngle + rotation;
+                        
+                        // Get current globe size for 20% empty radius
+                        const minRadius = this.config.baseRadius * 1.2; // Keep stable galaxy center spacing
+                        const maxRadius = Math.max(window.innerWidth, window.innerHeight) * 0.9; // Full screen coverage
+                        
+                        // Edge-heavy distribution - more particles at outer edges
+                        const radiusRatio = (p.galaxyRadius - 20) / 480;
+                        const particleRadius = minRadius + radiusRatio * (maxRadius - minRadius);
+                        
+                        // Spiral motion - outer particles rotate slightly faster for trailing effect
+                        const spiralFactor = 0.85 + radiusRatio * 0.3; // More spiral at edges
+                        const spiralAngle = angle * spiralFactor;
+                        
+                        // Spread increases with distance from center
+                        const randomSpread = 15 + radiusRatio * 50;
+                        const offsetX = Math.sin(p.expandAngle * 7) * randomSpread * 0.5;
+                        const offsetY = Math.cos(p.expandAngle * 11) * randomSpread * 0.5;
+                        
+                        // Store previous position for motion trail
+                        p.prevX = p.x;
+                        p.prevY = p.y;
+                        
+                        // Calculate galaxy X, Y position
+                        const galaxyX = Math.cos(spiralAngle) * particleRadius + offsetX;
+                        const galaxyY = Math.sin(spiralAngle) * particleRadius + offsetY;
+                        
+                        // Inverted and reduced Z-axis tilt (~15 degrees, inverted)
+                        const tiltAngle = -0.26; // ~-15 degrees (inverted)
+                        const tiltedGalaxyY = galaxyY * Math.cos(tiltAngle);
+                        const tiltedGalaxyZ = galaxyY * Math.sin(tiltAngle) + p.galaxyZ * 0.5;
+                        
+                        // Globe position (rotating sphere centered)
+                        const globeRotation = rotation * 0.5;
+                        const globeTx = p.baseX * Math.cos(globeRotation) - p.baseZ * Math.sin(globeRotation);
+                        const globeTz = p.baseX * Math.sin(globeRotation) + p.baseZ * Math.cos(globeRotation);
+                        const globeScale = this.globeScale;
+                        
+                        // Interpolate between globe and galaxy based on transition
+                        p.targetX = globeTx * globeScale * (1 - galaxyT) + galaxyX * galaxyT;
+                        p.targetY = p.baseY * globeScale * (1 - galaxyT) + tiltedGalaxyY * galaxyT;
+                        p.targetZ = globeTz * globeScale * (1 - galaxyT) + tiltedGalaxyZ * galaxyT;
+                    }
+                    
+                    // Smooth direct interpolation instead of spring physics
+                    const smoothing = this.mode === 'galaxy' ? 0.12 : 0.1;
+                    p.x += (p.targetX - p.x) * smoothing;
+                    p.y += (p.targetY - p.y) * smoothing;
+                    p.z += (p.targetZ - p.z) * smoothing;
+                    
+                    const scale = this.Z_PERSPECTIVE / (this.Z_PERSPECTIVE + p.z);
+                    let sx, sy;
+                    
+                    if (this.mode === 'globe') {
+                        sx = this.globeX + p.x * scale;
+                        sy = this.globeY + p.y * scale;
+                    } else if (this.mode === 'galaxy') {
+                        sx = cx + p.x * scale;
+                        sy = cy + p.y * scale;
+                    } else {
+                        sx = cx + p.x * scale;
+                        sy = cy + p.y * scale;
+                    }
+                    
+                    if (this.mouse.isActive) {
+                        const dx = sx - this.mouse.x;
+                        const dy = sy - this.mouse.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < 150) {
+                            const force = Math.pow((150 - dist) / 150, 2) * 12;
+                            p.vx += (dx / dist) * force;
+                            p.vy += (dy / dist) * force;
+                        }
+                    }
+                    
+                    // Apply velocity for mouse repulsion effect
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vx *= 0.92;
+                    p.vy *= 0.92;
+                    
+                    const finalScale = this.Z_PERSPECTIVE / (this.Z_PERSPECTIVE + p.z);
+                    let drawX, drawY;
+                    
+                    if (this.mode === 'globe') {
+                        drawX = this.globeX + p.x * finalScale;
+                        drawY = this.globeY + p.y * finalScale;
+                    } else if (this.mode === 'galaxy') {
+                        drawX = cx + p.x * finalScale;
+                        drawY = cy + p.y * finalScale;
+                    } else {
+                        drawX = cx + p.x * finalScale;
+                        drawY = cy + p.y * finalScale;
+                    }
+                    
+                    if (p.z > -this.Z_PERSPECTIVE + 50 && finalScale > 0.15) {
+                        const alpha = finalScale * p.alpha;
+                        const particleSize = p.size * finalScale;
+                        
+                        // Motion glow - draw trail based on velocity
+                        if (this.mode === 'galaxy') {
+                            const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+                            const glowLength = Math.min(speed * 3, 15); // Trail length based on speed
+                            
+                            if (glowLength > 1) {
+                                // Draw motion trail
+                                const trailAngle = Math.atan2(p.vy, p.vx);
+                                const trailX = drawX - Math.cos(trailAngle) * glowLength;
+                                const trailY = drawY - Math.sin(trailAngle) * glowLength;
+                                
+                                const trailGradient = this.ctx.createLinearGradient(trailX, trailY, drawX, drawY);
+                                trailGradient.addColorStop(0, `hsla(${p.hue}, 70%, 70%, 0)`);
+                                trailGradient.addColorStop(1, `hsla(${p.hue}, 70%, 70%, ${alpha * 0.6})`);
+                                
+                                this.ctx.beginPath();
+                                this.ctx.moveTo(trailX, trailY);
+                                this.ctx.lineTo(drawX, drawY);
+                                this.ctx.strokeStyle = trailGradient;
+                                this.ctx.lineWidth = particleSize * 1.5;
+                                this.ctx.lineCap = 'round';
+                                this.ctx.stroke();
+                            }
+                        }
+                        
+                        // Draw particle
+                        this.ctx.beginPath();
+                        this.ctx.arc(drawX, drawY, particleSize, 0, Math.PI * 2);
+                        this.ctx.fillStyle = `hsla(${p.hue}, 70%, 70%, ${alpha})`;
+                        this.ctx.fill();
+                    }
+                });
+                
+                // Draw nebula sphere in center after MIRA section
+                if (this.mode === 'galaxy' && this.planetGlow > 0.1) {
+                    const glowIntensity = this.planetGlow;
+                    const galaxyT = this.galaxyTransition || 1;
+                    
+                    // Sphere size shrinks as galaxy expands (full size -> small center)
+                    const fullSphereRadius = this.config.baseRadius * 0.9;
+                    const minSphereRadius = 70;
+                    const sphereRadius = fullSphereRadius * (1 - galaxyT) + minSphereRadius * galaxyT;
+                    
+                    // Draw particle-based nebula sphere
+                    const nebulaRotation = this.galaxyRotation * 0.5 + time * 0.15;
+                    const nebulaParticleCount = 400;
+                    
+                    this.ctx.globalCompositeOperation = 'lighter';
+                    
+                    for (let i = 0; i < nebulaParticleCount; i++) {
+                        // Fibonacci sphere distribution
+                        const phi = Math.acos(1 - 2 * (i + 0.5) / nebulaParticleCount);
+                        const theta = Math.PI * (1 + Math.sqrt(5)) * i + nebulaRotation;
+                        
+                        const nx = sphereRadius * Math.sin(phi) * Math.cos(theta);
+                        const ny = sphereRadius * Math.sin(phi) * Math.sin(theta);
+                        const nz = sphereRadius * Math.cos(phi);
+                        
+                        // Apply rotation
+                        const rotatedX = nx * Math.cos(nebulaRotation * 0.3) - nz * Math.sin(nebulaRotation * 0.3);
+                        const rotatedZ = nx * Math.sin(nebulaRotation * 0.3) + nz * Math.cos(nebulaRotation * 0.3);
+                        
+                        // Perspective
+                        const nebulaScale = this.Z_PERSPECTIVE / (this.Z_PERSPECTIVE + rotatedZ);
+                        const nebulaX = cx + rotatedX * nebulaScale;
+                        const nebulaY = cy + ny * nebulaScale;
+                        
+                        // Only draw front-facing particles
+                        if (rotatedZ < sphereRadius * 0.5) {
+                            const depthAlpha = 0.3 + (1 - rotatedZ / sphereRadius) * 0.5;
+                            const pSize = (1 + (i % 3) * 0.5) * nebulaScale * glowIntensity;
+                            const pHue = 260 + (i % 30);
+                            
+                            this.ctx.beginPath();
+                            this.ctx.arc(nebulaX, nebulaY, pSize, 0, Math.PI * 2);
+                            this.ctx.fillStyle = `hsla(${pHue}, 70%, 75%, ${depthAlpha * glowIntensity})`;
+                            this.ctx.fill();
+                        }
+                    }
+                    
+                    // Outer nebula glow aura
+                    const outerGlow = this.ctx.createRadialGradient(cx, cy, sphereRadius * 0.5, cx, cy, sphereRadius * 1.8);
+                    outerGlow.addColorStop(0, `hsla(270, 60%, 70%, ${glowIntensity * 0.4})`);
+                    outerGlow.addColorStop(0.5, `hsla(265, 50%, 55%, ${glowIntensity * 0.15})`);
+                    outerGlow.addColorStop(1, 'transparent');
+                    
+                    this.ctx.beginPath();
+                    this.ctx.arc(cx, cy, sphereRadius * 1.8, 0, Math.PI * 2);
+                    this.ctx.fillStyle = outerGlow;
+                    this.ctx.fill();
+                    
+                    // Show gradient blobs when in galaxy mode
+                    if (!blobsVisible && blobsContainer) {
+                        blobsContainer.classList.add('visible');
+                        blobsVisible = true;
+                    }
+                } else if (blobsVisible && this.mode !== 'galaxy' && blobsContainer) {
+                    blobsContainer.classList.remove('visible');
+                    blobsVisible = false;
+                }
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        class FeatureParticles {
+            constructor() {
+                this.canvases = document.querySelectorAll('.mira-feature-particles');
+                this.systems = [];
+                this.globalTime = 0;
+                
+                this.canvases.forEach(canvas => {
+                    const system = this.createSystem(canvas);
+                    this.systems.push(system);
+                });
+                
+                this.animate();
+            }
+            
+            createSystem(canvas) {
+                const ctx = canvas.getContext('2d', { alpha: true });
+                const size = 800; // Fixed canvas size
+                const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+                
+                canvas.width = size * dpr;
+                canvas.height = size * dpr;
+                canvas.style.width = size + 'px';
+                canvas.style.height = size + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                
+                const centerX = size / 2; // Center of canvas
+                const centerY = size / 2;
+                
+                const particles = [];
+                const particleCount = 500; // Dense particle count
+                const ringRadiusCore = 90;   // Core dense ring
+                const ringRadiusOuter = 170; // Outer sparse ring
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const baseAngle = (i / particleCount) * Math.PI * 2 + Math.random() * 0.4;
+                    
+                    // Denser near center: use power distribution
+                    const radiusRatio = Math.pow(Math.random(), 0.4); // More dense near center
+                    const ringRadius = ringRadiusCore + radiusRatio * (ringRadiusOuter - ringRadiusCore);
+                    
+                    // Particles further from center are smaller and dimmer
+                    const distanceFactor = 1 - radiusRatio;
+                    
+                    // Random spawn position from outside canvas edges
+                    const spawnEdge = Math.floor(Math.random() * 4);
+                    let spawnX, spawnY;
+                    const margin = 50;
+                    
+                    switch(spawnEdge) {
+                        case 0: spawnX = Math.random() * size; spawnY = -margin - Math.random() * 200; break;
+                        case 1: spawnX = size + margin + Math.random() * 200; spawnY = Math.random() * size; break;
+                        case 2: spawnX = Math.random() * size; spawnY = size + margin + Math.random() * 200; break;
+                        case 3: spawnX = -margin - Math.random() * 200; spawnY = Math.random() * size; break;
+                    }
+                    
+                    particles.push({
+                        baseAngle,
+                        angle: baseAngle,
+                        ringRadius,
+                        rotationSpeed: 0.004 + Math.random() * 0.008,
+                        size: (0.8 + Math.random() * 1.8) * (0.5 + distanceFactor * 0.8), // Bigger near center
+                        alpha: (0.3 + Math.random() * 0.5) * (0.4 + distanceFactor * 0.6), // Brighter near center
+                        hue: 250 + Math.random() * 35,
+                        spawnX, spawnY,
+                        x: spawnX, y: spawnY,
+                        // Staggered delay based on spawn position for flowing effect
+                        delay: Math.random() * 0.5,
+                        // Exit direction
+                        exitAngle: baseAngle + (Math.random() - 0.5) * 1.5,
+                        exitSpeed: 2 + Math.random() * 6 + radiusRatio * 4, // Outer particles fly further
+                        centerX, centerY, // Store canvas center
+                    });
+                }
+                
+                return { 
+                    canvas, ctx, particles, size,
+                    centerX, centerY,
+                    transitionProgress: 0,
+                    targetProgress: 0,
+                    lastActiveTime: 0
+                };
+            }
+            
+            animate() {
+                this.globalTime += 0.016;
+                
+                this.systems.forEach((system) => {
+                    const { ctx, particles, canvas, size, centerX, centerY } = system;
+                    
+                    const layer = canvas.closest('.mira-content-layer');
+                    const isActive = layer && layer.classList.contains('active');
+                    const isExiting = layer && layer.classList.contains('exiting');
+                    
+                    ctx.clearRect(0, 0, size, size);
+                    
+                    // Use canvas center (which is aligned with icon center via CSS)
+                    const cx = centerX;
+                    const cy = centerY;
+                    
+                    // Set target progress
+                    if (isActive) {
+                        system.targetProgress = 1;
+                        system.lastActiveTime = this.globalTime;
+                    } else if (isExiting) {
+                        system.targetProgress = 0;
+                    } else {
+                        system.targetProgress = 0;
+                    }
+                    
+                    // Smooth transition
+                    const speed = isActive ? 0.03 : 0.05;
+                    system.transitionProgress += (system.targetProgress - system.transitionProgress) * speed;
+                    
+                    const t = system.transitionProgress;
+                    
+                    // Skip if invisible
+                    if (!isActive && !isExiting && t < 0.01) {
+                        system.transitionProgress = 0;
+                        particles.forEach(p => { p.x = p.spawnX; p.y = p.spawnY; });
+                        return;
+                    }
+                    
+                    ctx.globalCompositeOperation = 'lighter';
+                    
+                    particles.forEach((p) => {
+                        p.angle += p.rotationSpeed;
+                        
+                        // Ring target position centered on canvas (which is centered on icon)
+                        const ringX = cx + Math.cos(p.angle) * p.ringRadius;
+                        const ringY = cy + Math.sin(p.angle) * p.ringRadius;
+                        
+                        // Delayed entry for flowing effect
+                        const entryT = Math.max(0, Math.min(1, (t - p.delay) / (1 - p.delay)));
+                        const easeIn = entryT * entryT * (3 - 2 * entryT);
+                        
+                        if (isActive || t > 0.3) {
+                            // Flow from spawn to ring position
+                            p.x = p.spawnX + (ringX - p.spawnX) * easeIn;
+                            p.y = p.spawnY + (ringY - p.spawnY) * easeIn;
+                        } else {
+                            // Dispersing outward
+                            const disperseT = 1 - (t / 0.3);
+                            const flyDist = disperseT * p.exitSpeed * 120;
+                            const exitX = cx + Math.cos(p.exitAngle) * (p.ringRadius + flyDist);
+                            const exitY = cy + Math.sin(p.exitAngle) * (p.ringRadius + flyDist) + disperseT * disperseT * 100;
+                            
+                            const smoothing = 0.12;
+                            p.x += (exitX - p.x) * smoothing;
+                            p.y += (exitY - p.y) * smoothing;
+                        }
+                        
+                        const alpha = p.alpha * Math.min(1, t * 4);
+                        
+                        if (alpha > 0.02) {
+                            // Glow
+                            const glowSize = p.size * 3;
+                            const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowSize);
+                            glow.addColorStop(0, `hsla(${p.hue}, 70%, 75%, ${alpha * 0.5})`);
+                            glow.addColorStop(0.6, `hsla(${p.hue}, 60%, 60%, ${alpha * 0.15})`);
+                            glow.addColorStop(1, 'transparent');
+                            
+                            ctx.beginPath();
+                            ctx.arc(p.x, p.y, glowSize, 0, Math.PI * 2);
+                            ctx.fillStyle = glow;
+                            ctx.fill();
+                            
+                            // Core
+                            ctx.beginPath();
+                            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                            ctx.fillStyle = `hsla(${p.hue}, 70%, 80%, ${alpha})`;
+                            ctx.fill();
+                        }
+                    });
+                });
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                new MiraParticleSystem('mira-canvas');
+                new FeatureParticles();
+            });
+        } else {
+            new MiraParticleSystem('mira-canvas');
+            new FeatureParticles();
+        }
+    })();
+    </script>
+    
+    <!-- Mega Menu Delay Handler -->
+    <script>
+    (function() {
+        // Wait for header to be loaded
+        const checkHeader = setInterval(() => {
+            const navDropdown = document.querySelector('.nav-dropdown');
+            if (navDropdown) {
+                clearInterval(checkHeader);
+                initMegaMenuDelay();
+            }
+        }, 100);
+        
+        function initMegaMenuDelay() {
+            const navDropdown = document.querySelector('.nav-dropdown');
+            const dropdownMega = document.querySelector('.dropdown-mega');
+            
+            if (!navDropdown || !dropdownMega) return;
+            
+            let closeTimeout;
+            let isOverDropdown = false;
+            let isOverMega = false;
+            
+            function openMenu() {
+                clearTimeout(closeTimeout);
+                navDropdown.classList.add('menu-open');
+            }
+            
+            function scheduleClose() {
+                clearTimeout(closeTimeout);
+                closeTimeout = setTimeout(() => {
+                    if (!isOverDropdown && !isOverMega) {
+                        navDropdown.classList.remove('menu-open');
+                    }
+                }, 400); // 400ms delay before closing
+            }
+            
+            // Nav dropdown (Features button) events
+            navDropdown.addEventListener('mouseenter', () => {
+                isOverDropdown = true;
+                openMenu();
+            });
+            
+            navDropdown.addEventListener('mouseleave', () => {
+                isOverDropdown = false;
+                scheduleClose();
+            });
+            
+            // Mega menu events
+            dropdownMega.addEventListener('mouseenter', () => {
+                isOverMega = true;
+                openMenu();
+            });
+            
+            dropdownMega.addEventListener('mouseleave', () => {
+                isOverMega = false;
+                scheduleClose();
+            });
+        }
+    })();
+    </script>
+    
+    <!-- Lead Form Handler -->
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            const lead = {
+                id: Date.now(),
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                companyName: document.getElementById('companyName').value,
+                companySize: document.getElementById('companySize').value,
+                source: 'homepage-cta',
+                timestamp: new Date().toISOString()
+            };
+            
+            setTimeout(() => {
+                // Get existing leads or create empty array
+                const existingLeads = JSON.parse(localStorage.getItem('talio_leads') || '[]');
+                existingLeads.push(lead);
+                localStorage.setItem('talio_leads', JSON.stringify(existingLeads));
+                
+                // Show success
+                document.getElementById('leadForm').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('active');
+            }, 1200);
+        });
+    </script>
+    
+    <!-- Smooth Section Snap -->
+    <script>
+    (function() {
+        // Target the headings specifically for snapping
+        const heroHeading = document.querySelector('.hero-content');
+        const miraIntro = document.querySelector('.mira-intro');
+        
+        let isSnapping = false;
+        let userScrolling = false;
+        let scrollEndTimer;
+        
+        function smoothSnapToCenter(element) {
+            if (isSnapping) return;
+            
+            isSnapping = true;
+            
+            const rect = element.getBoundingClientRect();
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = window.innerHeight / 2;
+            const scrollOffset = elementCenter - viewportCenter;
+            
+            // Only snap if there's meaningful distance to travel
+            if (Math.abs(scrollOffset) < 20) {
+                isSnapping = false;
+                return;
+            }
+            
+            window.scrollBy({
+                top: scrollOffset,
+                behavior: 'smooth'
+            });
+            
+            // Reset snapping state immediately
+            isSnapping = false;
+        }
+        
+        function isElementInSnapZone(element) {
+            const rect = element.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const elementCenter = rect.top + rect.height / 2;
+            
+            // Element is in snap zone if its center is between 10% and 90% of viewport
+            return elementCenter > viewportHeight * 0.01 && elementCenter < viewportHeight * 0.99;
+        }
+        
+        function isElementCentered(element) {
+            const rect = element.getBoundingClientRect();
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = window.innerHeight / 2;
+            return Math.abs(elementCenter - viewportCenter) < 50;
+        }
+        
+        // Detect when user stops scrolling
+        window.addEventListener('scroll', () => {
+            userScrolling = true;
+            clearTimeout(scrollEndTimer);
+            
+            scrollEndTimer = setTimeout(() => {
+                userScrolling = false;
+                
+                // Check hero first
+                if (heroHeading && isElementInSnapZone(heroHeading) && !isElementCentered(heroHeading)) {
+                    smoothSnapToCenter(heroHeading);
+                    return;
+                }
+                
+                // Then check MIRA intro
+                if (miraIntro && isElementInSnapZone(miraIntro) && !isElementCentered(miraIntro)) {
+                    smoothSnapToCenter(miraIntro);
+                    return;
+                }
+            }, 150); // Wait 150ms after scroll stops
+        }, { passive: true });
+        
+        // Debug log to confirm elements are found
+        console.log('Snap targets:', { heroHeading, miraIntro });
+    })();
+    </script>
+</body>
+</html>

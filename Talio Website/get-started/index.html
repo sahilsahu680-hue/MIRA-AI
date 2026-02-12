@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Start Your Free Trial | Talio</title>
+    <meta name="description" content="Start your free 14-day trial of Talio. Transform your workforce management with AI-powered insights, automated payroll, and MIRA AI assistant.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="../logo.webp">
+    <link rel="apple-touch-icon" href="../logo.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../modern.css">
+    
+</head>
+<body>
+    <!-- MIRA Particle Background -->
+    <canvas id="mira-canvas"></canvas>
+    
+    <div id="header-placeholder"></div>
+
+    <section class="get-started-page">
+        <div class="get-started-container">
+            <!-- Left Side - Benefits -->
+            <div class="get-started-info" data-aos="fade-right">
+                <div class="get-started-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Start Free Trial</span>
+                </div>
+                
+                <h1 class="get-started-title">
+                    Transform your<br>
+                    <span class="gradient-text">workforce management</span>
+                </h1>
+                
+                <p class="get-started-subtitle">
+                    Join thousands of companies using Talio to streamline HR, automate payroll, and make smarter decisions with AI.
+                </p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon purple">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>MIRA AI Assistant</h4>
+                            <p>Get instant answers and automate tasks with natural language</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon blue">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Save 10+ Hours Weekly</h4>
+                            <p>Automate attendance, payroll, and leave management</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon green">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Enterprise Security</h4>
+                            <p>Your data is encrypted and never shared with third parties</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon orange">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>24/7 Support</h4>
+                            <p>Our team is always ready to help you succeed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>14-day free trial</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cancel anytime</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Form -->
+            <div class="get-started-form-container" data-aos="fade-left">
+                <div class="form-header">
+                    <h2>Start Your Free Trial</h2>
+                    <p>Fill in your details to get started</p>
+                </div>
+                
+                <form class="lead-form" id="leadForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Work Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Company Name <span class="required">*</span></label>
+                            <input type="text" id="companyName" name="companyName" placeholder="Acme Inc." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="HR Manager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="industry">Industry <span class="required">*</span></label>
+                            <select id="industry" name="industry" required>
+                                <option value="">Select industry</option>
+                                <option value="technology">Technology</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Finance & Banking</option>
+                                <option value="retail">Retail & E-commerce</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="education">Education</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="construction">Construction</option>
+                                <option value="logistics">Logistics & Transport</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="companySize">Company Size <span class="required">*</span></label>
+                            <select id="companySize" name="companySize" required>
+                                <option value="">Select size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">201-500 employees</option>
+                                <option value="501+">501+ employees</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="source" name="source" value="get-started">
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>You're all set!</h3>
+                    <p>Thank you for signing up. We'll send you an email with your login details and next steps shortly.</p>
+                    <a href="../index.html" class="btn">
+                        <i class="fas fa-home"></i>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+                
+                <div class="form-footer">
+                    <p>By signing up, you agree to our <a href="../terms/index.html">Terms</a> and <a href="../privacy/index.html">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Particles -->
+    <script src="../components/particles.js"></script>
+    
+    <!-- Component Loader -->
+    <script src="../components/loader.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+        
+        // Lead Form Submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Submitting...</span>';
+            
+            // Collect form data
+            const lead = {
+                id: Date.now(),
+                firstName: document.getElementById('firstName').value.trim(),
+                lastName: document.getElementById('lastName').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                companyName: document.getElementById('companyName').value.trim(),
+                jobTitle: document.getElementById('jobTitle').value.trim(),
+                industry: document.getElementById('industry').value,
+                companySize: document.getElementById('companySize').value,
+                source: document.getElementById('source').value,
+                submittedAt: new Date().toISOString()
+            };
+            
+            // Save to localStorage (same as admin page expects)
+            const existingLeads = JSON.parse(localStorage.getItem('talio_leads') || '[]');
+            existingLeads.push(lead);
+            localStorage.setItem('talio_leads', JSON.stringify(existingLeads));
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Hide form, show success
+                document.getElementById('leadForm').style.display = 'none';
+                document.querySelector('.form-footer').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('visible');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

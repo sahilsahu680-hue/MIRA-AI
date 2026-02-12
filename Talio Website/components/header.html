@@ -1,0 +1,286 @@
+<!-- Talio Shared Header Component -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="{{BASE_URL}}index.html" class="logo">
+            <img src="{{BASE_URL}}logo.webp" alt="Talio" class="logo-img">
+            <span class="logo-text">Talio</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links" id="navLinks">
+            <a href="{{BASE_URL}}index.html#mira" class="nav-link">MIRA AI</a>
+            
+            <div class="nav-dropdown">
+                <a href="{{BASE_URL}}features/index.html" class="nav-link dropdown-trigger">
+                    Features <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </a>
+                <div class="dropdown-mega">
+                    <div class="mega-container">
+                        <!-- Core Features Column -->
+                        <div class="mega-column">
+                            <div class="mega-column-header">
+                                <span class="mega-column-icon blue"><i class="fas fa-cube"></i></span>
+                                <h4>Core Features</h4>
+                            </div>
+                            <div class="mega-items">
+                                <a href="{{BASE_URL}}features/attendance/index.html" class="mega-item">
+                                    <div class="mega-item-icon blue">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Smart Attendance</span>
+                                        <p class="mega-item-desc">GPS-enabled check-ins with geofencing</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/payroll/index.html" class="mega-item">
+                                    <div class="mega-item-icon green">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Automated Payroll</span>
+                                        <p class="mega-item-desc">Calculate salaries and payslips</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/leaves/index.html" class="mega-item">
+                                    <div class="mega-item-icon orange">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Leave Management</span>
+                                        <p class="mega-item-desc">Smart leave tracking & approvals</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Productivity Column -->
+                        <div class="mega-column">
+                            <div class="mega-column-header">
+                                <span class="mega-column-icon purple"><i class="fas fa-rocket"></i></span>
+                                <h4>Productivity</h4>
+                            </div>
+                            <div class="mega-items">
+                                <a href="{{BASE_URL}}features/projects/index.html" class="mega-item">
+                                    <div class="mega-item-icon purple">
+                                        <i class="fas fa-th-large"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Project Management</span>
+                                        <p class="mega-item-desc">Kanban-style project boards</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/goals/index.html" class="mega-item">
+                                    <div class="mega-item-icon pink">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Goals & OKRs</span>
+                                        <p class="mega-item-desc">Set and track objectives</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/workflows/index.html" class="mega-item">
+                                    <div class="mega-item-icon cyan">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">AI Workflows</span>
+                                        <p class="mega-item-desc">Automate repetitive tasks</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Communication Column -->
+                        <div class="mega-column">
+                            <div class="mega-column-header">
+                                <span class="mega-column-icon teal"><i class="fas fa-comments"></i></span>
+                                <h4>Communication</h4>
+                            </div>
+                            <div class="mega-items">
+                                <a href="{{BASE_URL}}features/mira-ai/index.html" class="mega-item">
+                                    <div class="mega-item-icon gradient">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">MIRA AI Assistant</span>
+                                        <p class="mega-item-desc">Your intelligent HR companion</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/team-chat/index.html" class="mega-item">
+                                    <div class="mega-item-icon teal">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Team Chat</span>
+                                        <p class="mega-item-desc">Real-time messaging & channels</p>
+                                    </div>
+                                </a>
+                                <a href="{{BASE_URL}}features/notifications/index.html" class="mega-item">
+                                    <div class="mega-item-icon yellow">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <div class="mega-item-content">
+                                        <span class="mega-item-title">Notifications</span>
+                                        <p class="mega-item-desc">Stay updated with real-time alerts</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Promo Column -->
+                        <div class="mega-column mega-promo-column">
+                            <div class="mega-promo-card">
+                                <div class="mega-promo-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Mobile & Desktop Apps</h4>
+                                <p>Access Talio anywhere with our native Android app and desktop productivity monitor.</p>
+                                <a href="{{BASE_URL}}downloads/index.html" class="mega-promo-btn">
+                                    <span>Download Now</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="{{BASE_URL}}pricing/index.html" class="nav-link">Pricing</a>
+            <a href="{{BASE_URL}}about/index.html" class="nav-link">About</a>
+            <a href="{{BASE_URL}}get-started/index.html" class="nav-link nav-cta">Get Started</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="sidebar-panel">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <a href="{{BASE_URL}}index.html" class="sidebar-logo">
+                <img src="{{BASE_URL}}logo.webp" alt="Talio" class="logo-img">
+                <span>Talio</span>
+            </a>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Main Menu -->
+        <div class="sidebar-content" id="sidebarMain">
+            <nav class="sidebar-nav">
+                <a href="{{BASE_URL}}index.html#mira" class="sidebar-link">
+                    <div class="sidebar-link-icon"><i class="fas fa-sparkles"></i></div>
+                    <span>MIRA AI</span>
+                </a>
+                
+                <button class="sidebar-link has-submenu" id="featuresMenuBtn">
+                    <div class="sidebar-link-icon"><i class="fas fa-th-large"></i></div>
+                    <span>Features</span>
+                    <i class="fas fa-chevron-right sidebar-arrow"></i>
+                </button>
+                
+                <a href="{{BASE_URL}}pricing/index.html" class="sidebar-link">
+                    <div class="sidebar-link-icon"><i class="fas fa-tags"></i></div>
+                    <span>Pricing</span>
+                </a>
+                
+                <a href="{{BASE_URL}}about/index.html" class="sidebar-link">
+                    <div class="sidebar-link-icon"><i class="fas fa-users"></i></div>
+                    <span>About</span>
+                </a>
+                
+                <a href="{{BASE_URL}}downloads/index.html" class="sidebar-link">
+                    <div class="sidebar-link-icon"><i class="fas fa-download"></i></div>
+                    <span>Downloads</span>
+                </a>
+                
+                <a href="{{BASE_URL}}help/index.html" class="sidebar-link">
+                    <div class="sidebar-link-icon"><i class="fas fa-question-circle"></i></div>
+                    <span>Help Center</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-cta">
+                <a href="{{BASE_URL}}get-started/index.html" class="sidebar-cta-btn">
+                    <span>Get Started Free</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Features Submenu - Separate layer with solid background -->
+        <div class="sidebar-submenu" id="sidebarFeatures">
+            <!-- Submenu Header -->
+            <div class="sidebar-header">
+                <button class="sidebar-back" id="featuresBackBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Menu</span>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="sidebar-submenu-header">
+                    <h3>Features</h3>
+                    <a href="{{BASE_URL}}features/index.html" class="sidebar-view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <div class="sidebar-category">
+                        <span class="sidebar-category-title">Core Features</span>
+                        <a href="{{BASE_URL}}features/attendance/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon blue"><i class="fas fa-clock"></i></div>
+                            <span>Smart Attendance</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/payroll/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon green"><i class="fas fa-wallet"></i></div>
+                            <span>Automated Payroll</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/leaves/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon orange"><i class="fas fa-calendar-alt"></i></div>
+                            <span>Leave Management</span>
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-category">
+                        <span class="sidebar-category-title">Productivity</span>
+                        <a href="{{BASE_URL}}features/projects/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon purple"><i class="fas fa-th-large"></i></div>
+                            <span>Project Management</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/goals/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon pink"><i class="fas fa-bullseye"></i></div>
+                            <span>Goals & OKRs</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/workflows/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon cyan"><i class="fas fa-cogs"></i></div>
+                            <span>AI Workflows</span>
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-category">
+                        <span class="sidebar-category-title">Communication</span>
+                        <a href="{{BASE_URL}}features/mira-ai/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon gradient"><i class="fas fa-robot"></i></div>
+                            <span>MIRA AI Assistant</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/team-chat/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon teal"><i class="fas fa-comment-dots"></i></div>
+                            <span>Team Chat</span>
+                        </a>
+                        <a href="{{BASE_URL}}features/notifications/index.html" class="sidebar-link">
+                            <div class="sidebar-link-icon yellow"><i class="fas fa-bell"></i></div>
+                            <span>Notifications</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

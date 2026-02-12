@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRA AI Assistant - Talio | Your Intelligent HR Companion</title>
+    <meta name="description" content="Meet MIRA, Talio's AI assistant that answers HR questions, generates reports, provides insights, and helps manage your workforce with natural language.">
+    
+    <link rel="icon" type="image/webp" href="../../logo.webp">
+    <link rel="apple-touch-icon" href="../../logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../modern.css">
+</head>
+<body>
+    <canvas id="mira-canvas"></canvas>
+    <div id="header-placeholder"></div>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="page-badge" data-aos="fade-up">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+            </div>
+            <h1 class="page-title" data-aos="fade-up" data-aos-delay="100">
+                Meet <span class="gradient-text">MIRA AI</span>
+            </h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Your intelligent HR companion that answers questions, generates reports, 
+                and provides insights using natural language. Work smarter, not harder.
+            </p>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#lead-form" class="btn btn-primary">Try MIRA Free <i class="fas fa-arrow-right"></i></a>
+                <a href="#features" class="btn btn-outline">See Capabilities</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">10x</span>
+                    <span class="stat-label">Faster Answers</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Query Accuracy</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Always Available</span>
+                </div>
+                <div class="stat-card liquid-glass">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Languages Supported</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-sparkles"></i> AI Capabilities</span>
+                <h2>What <span class="gradient-text">MIRA</span> Can Do</h2>
+                <p>A conversational AI that understands HR</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card liquid-glass" data-aos="fade-up">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #06B6D4);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Natural Language</h3>
+                    <p>Ask MIRA anything in plain English. "Who's on leave next week?" or "Generate a payroll report for January."</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Conversational queries</li>
+                        <li><i class="fas fa-check"></i> Context awareness</li>
+                        <li><i class="fas fa-check"></i> Multiple languages</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Instant Reports</h3>
+                    <p>Generate any report with a simple question. MIRA creates charts, tables, and exportable documents in seconds.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Auto-generated charts</li>
+                        <li><i class="fas fa-check"></i> Export to PDF/Excel</li>
+                        <li><i class="fas fa-check"></i> Custom report templates</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon green">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Smart Insights</h3>
+                    <p>MIRA analyzes patterns and surfaces insights. "Attendance is down 15% this month - here's why..."</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Trend analysis</li>
+                        <li><i class="fas fa-check"></i> Predictive alerts</li>
+                        <li><i class="fas fa-check"></i> Anomaly detection</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Automation</h3>
+                    <p>"Remind me to review leave requests every Monday" - MIRA handles scheduling and reminders.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Smart reminders</li>
+                        <li><i class="fas fa-check"></i> Recurring tasks</li>
+                        <li><i class="fas fa-check"></i> Workflow triggers</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon pink">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Employee Helper</h3>
+                    <p>Employees can ask MIRA about their leave balance, payslips, or company policies anytime.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Self-service queries</li>
+                        <li><i class="fas fa-check"></i> Policy lookups</li>
+                        <li><i class="fas fa-check"></i> Payslip queries</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card liquid-glass" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #F97316);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Learning AI</h3>
+                    <p>MIRA learns your company's patterns and preferences. The more you use it, the smarter it gets.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Personalized responses</li>
+                        <li><i class="fas fa-check"></i> Company knowledge</li>
+                        <li><i class="fas fa-check"></i> Continuous improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-route"></i> How It Works</span>
+                <h2>Start Using MIRA in <span class="gradient-text">3 Steps</span></h2>
+            </div>
+            
+            <div class="steps-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-card liquid-glass">
+                    <div class="step-number">1</div>
+                    <h3>Ask Anything</h3>
+                    <p>Type or speak your question in natural language. MIRA understands context and intent.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card liquid-glass">
+                    <div class="step-number">2</div>
+                    <h3>Get Instant Response</h3>
+                    <p>MIRA processes your query and returns accurate answers, reports, or actions in seconds.</p>
+                </div>
+                <div class="step-connector"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-card liquid-glass">
+                    <div class="step-number">3</div>
+                    <h3>Take Action</h3>
+                    <p>Act on insights, download reports, or let MIRA handle it automatically for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="testimonial-card liquid-glass" data-aos="fade-up">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"MIRA has transformed how we handle HR queries. What used to take 30 minutes of digging through spreadsheets now takes 10 seconds. Our HR team can finally focus on strategic work instead of answering the same questions repeatedly."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <strong>Priya Sharma</strong>
+                            <span>HR Head, TechVentures Ltd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-section" id="lead-form">
+        <div class="container">
+            <div class="lead-grid">
+                <div class="lead-info" data-aos="fade-right">
+                    <span class="section-badge"><i class="fas fa-rocket"></i> Get Started</span>
+                    <h2>Ready to Experience <span class="gradient-text">AI-Powered HR?</span></h2>
+                    <p>Join thousands of companies using MIRA to transform their HR operations. Fill out the form and our team will reach out within 24 hours.</p>
+                    
+                    <div class="lead-benefits">
+                        <div class="lead-benefit"><i class="fas fa-check-circle"></i><span>Free 14-day trial</span></div>
+                        <div class="lead-benefit"><i class="fas fa-check-circle"></i><span>No credit card required</span></div>
+                        <div class="lead-benefit"><i class="fas fa-check-circle"></i><span>Personal onboarding session</span></div>
+                        <div class="lead-benefit"><i class="fas fa-check-circle"></i><span>Cancel anytime</span></div>
+                    </div>
+                    
+                    <div class="lead-trust">
+                        <p>Trusted by 500+ companies worldwide</p>
+                        <div class="trust-logos">
+                            <i class="fas fa-building"></i>
+                            <i class="fas fa-industry"></i>
+                            <i class="fas fa-rocket"></i>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead-form-wrapper" data-aos="fade-left">
+                    <form class="lead-form" id="leadForm">
+                        <div class="form-step active" id="step1">
+                            <div class="step-header">
+                                <div class="step-indicator">
+                                    <div class="step-dot active">1</div>
+                                    <div class="step-line"></div>
+                                    <div class="step-dot">2</div>
+                                </div>
+                                <h3>Personal Information</h3>
+                                <p>Tell us about yourself</p>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Work Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title *</label>
+                                <input type="text" id="jobTitle" name="jobTitle" required placeholder="HR Manager">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" id="nextStep">
+                                <span>Next Step</span><i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="form-step" id="step2">
+                            <div class="step-header">
+                                <div class="step-indicator">
+                                    <div class="step-dot completed"><i class="fas fa-check"></i></div>
+                                    <div class="step-line active"></div>
+                                    <div class="step-dot active">2</div>
+                                </div>
+                                <h3>Company Information</h3>
+                                <p>Tell us about your organization</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="companyName">Company Name *</label>
+                                <input type="text" id="companyName" name="companyName" required placeholder="Acme Inc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry *</label>
+                                <select id="industry" name="industry" required>
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance & Banking</option>
+                                    <option value="retail">Retail & E-commerce</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="education">Education</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="companySize">Company Size *</label>
+                                <select id="companySize" name="companySize" required>
+                                    <option value="">Select company size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="501-1000">501-1000 employees</option>
+                                    <option value="1000+">1000+ employees</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">What would you like MIRA to help with? (Optional)</label>
+                                <textarea id="message" name="message" rows="3" placeholder="Tell us about your HR challenges..."></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" id="prevStep">
+                                    <i class="fas fa-arrow-left"></i><span>Back</span>
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="submitForm">
+                                    <span>Start Free Trial</span><i class="fas fa-rocket"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-success" id="formSuccess">
+                            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                            <h3>Thank You!</h3>
+                            <p>We've received your information. Our team will contact you within 24 hours to schedule your personalized demo.</p>
+                            <a href="../../index.html" class="btn btn-outline">Back to Home</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-th-large"></i> Related Features</span>
+                <h2>MIRA Works With</h2>
+            </div>
+            <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);" data-aos="fade-up">
+                <a href="../workflows/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>AI Workflows</h3>
+                    <p>Power your automations with MIRA intelligence.</p>
+                </a>
+                <a href="../attendance/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon blue"><i class="fas fa-clock"></i></div>
+                    <h3>Smart Attendance</h3>
+                    <p>Ask MIRA about attendance patterns.</p>
+                </a>
+                <a href="../notifications/index.html" class="feature-card liquid-glass" style="text-decoration: none;">
+                    <div class="feature-icon green"><i class="fas fa-bell"></i></div>
+                    <h3>Smart Notifications</h3>
+                    <p>MIRA-powered intelligent alerts.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../components/loader.js"></script>
+    <script src="../../components/particles.js"></script>
+    <script src="../../components/lead-form.js"></script>
+    <script>AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });</script>
+</body>
+</html>
